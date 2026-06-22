@@ -1,5 +1,29 @@
 @import "tailwindcss";
 
+/* Custom Tailwind */
+
+@theme {
+    /* Font */
+    --font-jost: "Jost", sans-serif;
+
+    /* Colors */
+    --color-peach: #E7816B;
+    --color-black: #1D1C1E;
+    --color-white: #FFFFFF;
+    --color-light-peach: #FFAD9B;
+    --color-dark-grey: #333136;
+    --color-light-grey: #F1F3F5;
+}
+
+/* Applies the Jost font to the entire HTML document */
+@layer base {
+    html {
+        @apply font-jost;
+    }
+}
+
+/* CSS */
+
 * {
     box-sizing: border-box;
 }

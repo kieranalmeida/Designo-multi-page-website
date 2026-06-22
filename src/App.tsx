@@ -8,7 +8,7 @@ import WebDesign from "./components/WebDesign"
 import AppDesign from "./components/AppDesign"
 import GraphicDesign from "./components/GraphicDesign"
 import About from "./components/About"
-import Location from "./components/Location"
+import Locations from "./components/Locations"
 import Contact from "./components/Contact"
 
 export default function App(): JSX.Element {
@@ -21,7 +21,7 @@ export default function App(): JSX.Element {
                     <Route path="/app-design" element={<AppDesign />}/>
                     <Route path="/graphic-design" element={<GraphicDesign />}/>
                     <Route path="/about" element={<About />}/>
-                    <Route path="/location" element={<Location />}/>
+                    <Route path="/locations" element={<Locations />}/>
                     <Route path="/contact" element={<Contact />}/>
                 </Route>
             </Routes>
