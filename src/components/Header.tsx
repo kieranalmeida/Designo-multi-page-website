@@ -4,12 +4,13 @@ import logoDark from "../images/shared/desktop/logo-dark.png" // Import dark ver
 import hamburgerButton from "../images/shared/mobile/icon-hamburger.svg"
 
 export default function Header(): JSX.Element {
-    // Returns styling for the NavLinks and uses the isActive property from React to apply active Link styling
+    // Returns styling for the NavLinks and uses the isActive property provided by React to apply active Link styling
     const navLinkClass = ({isActive}: {isActive: boolean}) => `
-        text-black text-[0.875rem] leading-[3.5px] tracking-[2px] uppercase hover:cursor-pointer hover:scale-105 transition ${isActive ? "underline": "hover:underline"}
+        text-black text-[0.875rem] leading-[0.875rem] tracking-[0.125rem] uppercase hover:cursor-pointer ${isActive ? "underline": "hover:underline"}
     `
+    // 14, 2
     return (
-        <header className="flex justify-between items-center py-8.75 px-6 md:py-16 md:px-9.75 md:p xl:px-41.25">
+        <header className="flex justify-between items-center py-8.75 px-6 md:py-16 md:px-9.75 md:p 2xl:px-41">
             <Link to="/">
                 <img className="w-39.25" src={logoDark}/>
             </Link>
