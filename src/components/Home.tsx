@@ -3,18 +3,24 @@ import {Link} from "react-router-dom"
 // Hero section images
 import patternHeroHome from "../images/home/desktop/bg-pattern-hero-home.svg"
 import heroPhone from "../images/home/desktop/image-hero-phone.png"
-// Mobile images
+// Project section mobile images
 import webDesignMobile from "../images/home/mobile/image-web-design.jpg"
 import appDesignMobile from "../images/home/mobile/image-app-design.jpg"
 import graphicDesignMobile from "../images/home/mobile/image-graphic-design.jpg"
-// Tablet images
+// Project section tablet images
 import webDesignTablet from "../images/home/tablet/image-web-design.jpg"
 import appDesignTablet from "../images/home/tablet/image-app-design.jpg"
 import graphicDesignTablet from "../images/home/tablet/image-graphic-design.jpg"
-// Desktop images
+// Project section desktop images
 import webDesignDesktop from "../images/home/desktop/image-web-design-large.jpg"
 import appDesignDesktop from "../images/home/desktop/image-app-design.jpg"
 import graphicDesignDesktop from "../images/home/desktop/image-graphic-design.jpg"
+// About section images
+import illustrationPassionate from "../images/home/desktop/illustration-passionate.svg"
+import illustrationFriendly from "../images/home/desktop/illustration-friendly.svg"
+import illustrationResourceful from "../images/home/desktop/illustration-resourceful.svg"
+import patternSmallCircle from "../images/shared/desktop/bg-pattern-small-circle.svg"
+// import patternLeaf from "../images/shared/desktop/bg-pattern-leaf.svg"
 // Components
 import ProjectCard from "./ProjectCard"
 
@@ -73,6 +79,42 @@ export default function Home(): JSX.Element {
                 
                 <ProjectCard images={graphicDesignImages}>Graphic design</ProjectCard>
 
+            </section>
+
+            {/* About section */}
+            <section className="relative flex flex-col gap-y-20 mx-6 md:gap-y-8 md:mx-10 2xl:flex-row 2xl:gap-x-8 2xl:mx-41">
+
+
+                    <div className="relative flex flex-col items-center md:flex-row md:gap-x-12 2xl:flex-col">
+                        <img src={illustrationPassionate}/>
+                        <img className="absolute -z-1 top-0" src={patternSmallCircle}/>
+
+                        <div className="text-dark-grey text-center md:text-start 2xl:text-center">
+                            <h2 className="text-[1.25rem] font-medium leading-6.5 tracking-[0.3125rem] uppercase mt-12 mb-8 md:mt-0 md:mb-4 2xl:mt-12 2xl:mb-8">Passionate</h2>
+                            <p className="leading-6.5">Each project starts with an in-depth brand research to ensure we only create products that serve a purpose. We merge art, design, and technology into exciting new solutions.</p>
+                        </div>
+                    </div>
+
+                    <div className="relative flex flex-col items-center md:flex-row md:gap-x-12 2xl:flex-col">
+                        <img src={illustrationResourceful}/>
+                        <img className="absolute -z-1 top-0" src={patternSmallCircle}/>
+
+                        <div className="text-dark-grey text-center md:text-start 2xl:text-center">
+                            <h2 className="text-[1.25rem] font-medium leading-6.5 tracking-[0.3125rem] uppercase mt-12 mb-8 md:mt-0 md:mb-4 2xl:mt-12 2xl:mb-8">Resourceful</h2>
+                            <p className="leading-6.5">Everything that we do has a strategic purpose. We use an agile approach in all of our projects and value customer collaboration. It guarantees superior results that fulfill our clients' needs.</p>
+                        </div>
+                    </div>
+
+                    <div className="relative flex flex-col items-center md:flex-row md:gap-x-12 2xl:flex-col">
+                        <img src={illustrationFriendly}/>
+                        <img className="absolute -z-1 top-0" src={patternSmallCircle}/>
+
+                        <div className="text-dark-grey text-center md:text-start 2xl:text-center">
+                            <h2 className="text-[1.25rem] font-medium leading-6.5 tracking-[0.3125rem] uppercase mt-12 mb-8 md:mt-0 md:mb-4 2xl:mt-12 2xl:mb-8">Friendly</h2>
+                            <p className="leading-6.5"> We are a group of enthusiastic folks who know how to put people first. Our success depends on our customers, and we strive to give them the best experience a company can provide.</p>
+                        </div>
+                    </div>
+                    {/* <img className="absolute -z-2 rotate-180" src={patternLeaf}/> */}
             </section>
         </main>
     )
