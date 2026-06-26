@@ -1,6 +1,6 @@
 import type {JSX} from "react"
 import {Link, NavLink} from "react-router-dom"
-import logoDark from "../images/shared/desktop/logo-dark.png" // Import dark version of logo (for Header)
+import logoDark from "../images/shared/desktop/logo-dark.png"
 import hamburgerButton from "../images/shared/mobile/icon-hamburger.svg"
 
 export default function Header(): JSX.Element {

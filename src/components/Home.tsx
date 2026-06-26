@@ -20,7 +20,7 @@ import illustrationPassionate from "../images/home/desktop/illustration-passiona
 import illustrationFriendly from "../images/home/desktop/illustration-friendly.svg"
 import illustrationResourceful from "../images/home/desktop/illustration-resourceful.svg"
 import patternSmallCircle from "../images/shared/desktop/bg-pattern-small-circle.svg"
-// import patternLeaf from "../images/shared/desktop/bg-pattern-leaf.svg"
+import patternLeaf from "../images/shared/desktop/bg-pattern-leaf.svg"
 // Components
 import ProjectCard from "./ProjectCard"
 
@@ -42,10 +42,9 @@ const graphicDesignImages = {
     desktop: graphicDesignDesktop
 }
 
-
 export default function Home(): JSX.Element {
     return (
-        <main className="flex flex-col gap-y-40 mb-30">
+        <main className="relative flex flex-col gap-y-30 2xl:gap-y-40">
             {/* Hero section */}
             <section className="relative flex flex-col items-center h-210.75 pt-20 px-6 bg-peach overflow-hidden md:mx-10 md:pt-15 md:px-14.5 md:rounded-2xl 2xl:flex-row 2xl:items-start 2xl:gap-x-10 2xl:h-160 2xl:mx-41 2xl:pt-36.25 2xl:px-26.25">
                 <div className="z-10 flex flex-col items-center text-center text-white 2xl:items-start 2xl:text-left">
@@ -84,7 +83,6 @@ export default function Home(): JSX.Element {
             {/* About section */}
             <section className="relative flex flex-col gap-y-20 mx-6 md:gap-y-8 md:mx-10 2xl:flex-row 2xl:gap-x-8 2xl:mx-41">
 
-
                     <div className="relative flex flex-col items-center md:flex-row md:gap-x-12 2xl:flex-col">
                         <img src={illustrationPassionate}/>
                         <img className="absolute -z-1 top-0" src={patternSmallCircle}/>
@@ -111,11 +109,13 @@ export default function Home(): JSX.Element {
 
                         <div className="text-dark-grey text-center md:text-start 2xl:text-center">
                             <h2 className="text-[1.25rem] font-medium leading-6.5 tracking-[0.3125rem] uppercase mt-12 mb-8 md:mt-0 md:mb-4 2xl:mt-12 2xl:mb-8">Friendly</h2>
-                            <p className="leading-6.5"> We are a group of enthusiastic folks who know how to put people first. Our success depends on our customers, and we strive to give them the best experience a company can provide.</p>
+                            <p className="leading-6.5">We are a group of enthusiastic folks who know how to put people first. Our success depends on our customers, and we strive to give them the best experience a company can provide.</p>
                         </div>
                     </div>
-                    {/* <img className="absolute -z-2 rotate-180" src={patternLeaf}/> */}
+
             </section>
+
+            <img className="absolute -z-2 w-251.5 -bottom-66 right-0 rotate-180" src={patternLeaf}/>
         </main>
     )
 }
