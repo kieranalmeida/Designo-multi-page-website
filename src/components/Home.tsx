@@ -1,5 +1,7 @@
 import type {JSX} from "react"
 import {Link} from "react-router-dom"
+// Components
+import ProjectCard from "./ProjectCard"
 // Hero section images
 import patternHeroHome from "../images/home/desktop/bg-pattern-hero-home.svg"
 import heroPhone from "../images/home/desktop/image-hero-phone.png"
@@ -20,9 +22,8 @@ import illustrationPassionate from "../images/home/desktop/illustration-passiona
 import illustrationFriendly from "../images/home/desktop/illustration-friendly.svg"
 import illustrationResourceful from "../images/home/desktop/illustration-resourceful.svg"
 import patternSmallCircle from "../images/shared/desktop/bg-pattern-small-circle.svg"
+// Other
 import patternLeaf from "../images/shared/desktop/bg-pattern-leaf.svg"
-// Components
-import ProjectCard from "./ProjectCard"
 
 const webDesignImages = {
     mobile: webDesignMobile,
@@ -44,7 +45,7 @@ const graphicDesignImages = {
 
 export default function Home(): JSX.Element {
     return (
-        <main className="relative flex flex-col gap-y-30 2xl:gap-y-40">
+        <main className="relative flex flex-col gap-y-30 2xl:gap-y-40" aria-label="Hero section">
             {/* Hero section */}
             <section className="relative flex flex-col items-center h-210.75 pt-20 px-6 bg-peach overflow-hidden md:mx-10 md:pt-15 md:px-14.5 md:rounded-2xl 2xl:flex-row 2xl:items-start 2xl:gap-x-10 2xl:h-160 2xl:mx-41 2xl:pt-36.25 2xl:px-26.25">
                 <div className="z-10 flex flex-col items-center text-center text-white 2xl:items-start 2xl:text-left">
@@ -54,38 +55,38 @@ export default function Home(): JSX.Element {
                     </p>
 
                     <div className="mt-5 2xl:mt-10">
-                        <Link className="text-dark-grey text-[0.9375rem] font-medium leading-px uppercase py-4.5 px-6.25 bg-white rounded-md transition hover:text-white hover:bg-light-peach" to="/about">
+                        <Link className="text-dark-grey text-[0.9375rem] font-medium leading-px uppercase py-4.5 px-6.25 bg-white rounded-md transition hover:text-white hover:bg-light-peach" to="/about" aria-label="Learn more about our company">
                             Learn more
                         </Link>
                     </div>
                 </div>
 
                 <div className="flex justify-center">
-                    <img className="absolute z-10 top-75 max-w-none aria-hidden md:top-72 2xl:-right-20 2xl:-top-8" src={heroPhone}/>
-                    <img className="absolute z-0 -right-56 top-25 max-w-none aria-hidden md:-right-21 2xl:right-0 2xl:top-0" src={patternHeroHome}/>
+                    <img className="absolute z-10 top-75 max-w-none md:top-72 2xl:-right-20 2xl:-top-8" src={heroPhone} alt="Example of a website design displayed on a mobile phone"/>
+                    <img className="absolute z-0 -right-56 top-25 max-w-none md:-right-21 2xl:right-0 2xl:top-0" src={patternHeroHome} alt="" aria-hidden="true"/>
                 </div>
+                
             </section>
 
             {/* Projects section */}
-            <section className="mx-6 md:mx-10 2xl:mx-41 grid gap-y-6 2xl:grid-cols-2 2xl:grid-rows-2 2xl:gap-x-7.5 2xl:h-160">
-
+            <section className="mx-6 md:mx-10 2xl:mx-41 grid gap-y-6 2xl:grid-cols-2 2xl:grid-rows-2 2xl:gap-x-7.5 2xl:h-160" aria-label="Projects section">
                 {/* The three product cards display in a column on mobile and tablet screen sizes. For desktop and above, two columns with two rows are created, with the first card taking the first column and spanning both rows, and the other two evenly stacking in the other column by default. The cards grow in height up to the grid's height limit of 640px. */}
                 <div className="2xl:row-span-2">
-                    <ProjectCard images={webDesignImages }>Web design</ProjectCard>
+                    <ProjectCard url="web-design" images={webDesignImages }>Web design</ProjectCard>
                 </div>
 
-                <ProjectCard images={appDesignImages}>App design</ProjectCard>
+                <ProjectCard url="app-design" images={appDesignImages}>App design</ProjectCard>
                 
-                <ProjectCard images={graphicDesignImages}>Graphic design</ProjectCard>
+                <ProjectCard url="graphic-design" images={graphicDesignImages}>Graphic design</ProjectCard>
 
             </section>
 
             {/* About section */}
-            <section className="relative flex flex-col gap-y-20 mx-6 md:gap-y-8 md:mx-10 2xl:flex-row 2xl:gap-x-8 2xl:mx-41">
+            <section className="relative flex flex-col gap-y-20 mx-6 md:gap-y-8 md:mx-10 2xl:flex-row 2xl:gap-x-8 2xl:mx-41" aria-label="About section">
 
                     <div className="relative flex flex-col items-center md:flex-row md:gap-x-12 2xl:flex-col">
                         <img src={illustrationPassionate}/>
-                        <img className="absolute -z-1 top-0" src={patternSmallCircle}/>
+                        <img className="absolute -z-1 top-0" src={patternSmallCircle} alt="" aria-hidden="true"/>
 
                         <div className="text-dark-grey text-center md:text-start 2xl:text-center">
                             <h2 className="text-[1.25rem] font-medium leading-6.5 tracking-[0.3125rem] uppercase mt-12 mb-8 md:mt-0 md:mb-4 2xl:mt-12 2xl:mb-8">Passionate</h2>
@@ -95,7 +96,7 @@ export default function Home(): JSX.Element {
 
                     <div className="relative flex flex-col items-center md:flex-row md:gap-x-12 2xl:flex-col">
                         <img src={illustrationResourceful}/>
-                        <img className="absolute -z-1 top-0" src={patternSmallCircle}/>
+                        <img className="absolute -z-1 top-0" src={patternSmallCircle} alt="" aria-hidden="true"/>
 
                         <div className="text-dark-grey text-center md:text-start 2xl:text-center">
                             <h2 className="text-[1.25rem] font-medium leading-6.5 tracking-[0.3125rem] uppercase mt-12 mb-8 md:mt-0 md:mb-4 2xl:mt-12 2xl:mb-8">Resourceful</h2>
@@ -105,7 +106,7 @@ export default function Home(): JSX.Element {
 
                     <div className="relative flex flex-col items-center md:flex-row md:gap-x-12 2xl:flex-col">
                         <img src={illustrationFriendly}/>
-                        <img className="absolute -z-1 top-0" src={patternSmallCircle}/>
+                        <img className="absolute -z-1 top-0" src={patternSmallCircle} alt="" aria-hidden="true"/>
 
                         <div className="text-dark-grey text-center md:text-start 2xl:text-center">
                             <h2 className="text-[1.25rem] font-medium leading-6.5 tracking-[0.3125rem] uppercase mt-12 mb-8 md:mt-0 md:mb-4 2xl:mt-12 2xl:mb-8">Friendly</h2>
@@ -115,7 +116,7 @@ export default function Home(): JSX.Element {
 
             </section>
 
-            <img className="absolute -z-2 w-251.5 -bottom-66 right-0 rotate-180" src={patternLeaf}/>
+            <img className="absolute -z-2 w-251.5 -bottom-66 right-0 rotate-180 hidden 2xl:block" src={patternLeaf} alt="" aria-hidden="true"/>
         </main>
     )
 }

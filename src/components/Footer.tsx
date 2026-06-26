@@ -1,5 +1,6 @@
 import type {JSX} from "react"
 import {Link} from "react-router-dom"
+// Images
 import patternCallToAction from "../images/shared/desktop/bg-pattern-call-to-action.svg"
 import logoLight from "../images/shared/desktop/logo-light.png"
 import facebookIcon from "../images/shared/desktop/icon-facebook.svg"
@@ -18,7 +19,7 @@ export default function Footer(): JSX.Element {
                     <p className="text-[0.9375rem] leading-6.25 mt-6 mb-8 md:text-[1rem]">Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.</p>
                 </div>
 
-                <Link className="text-dark-grey text-[0.9375rem] font-medium tracking-0.25 uppercase py-4.25 px-4.75 bg-white rounded-md transition hover:text-white hover:bg-light-peach" to="/contact">
+                <Link className="text-dark-grey text-[0.9375rem] font-medium tracking-0.25 uppercase py-4.25 px-4.75 bg-white rounded-md transition hover:text-white hover:bg-light-peach" to="/contact" aria-label="Contact us">
                     Get in touch
                 </Link>
                 
@@ -29,16 +30,16 @@ export default function Footer(): JSX.Element {
             <div className="flex flex-col gap-y-10 w-full">
                 {/* Main footer first half */}
                 <div className="flex flex-col items-center gap-y-8 md:flex-row md:justify-between">
-                    <Link to="/">
-                        <img className="w-39.25" src={logoLight}/>
+                    <Link to="/" aria-label="Go to home page">
+                        <img className="w-39.25" src={logoLight} alt="Designo logo"/>
                     </Link>
 
                     <hr className="w-full border-[#979797] opacity-30 md:hidden"/>
 
                     <div className="flex flex-col items-center gap-y-8 text-white text-[0.875rem] leading-3.5 tracking-[0.125rem] uppercase md:flex-row md:gap-x-10.5">
-                        <Link className="hover:underline" to="/about">Our company</Link>
-                        <Link className="hover:underline" to="/locations">Locations</Link>
-                        <Link className="hover:underline" to="/contact">Contact</Link>
+                        <Link className="hover:underline" to="/about" aria-label="Learn more about our company">Our company</Link>
+                        <Link className="hover:underline" to="/locations" aria-label="Check what locations we operate in">Locations</Link>
+                        <Link className="hover:underline" to="/contact" aria-label="Contact us">Contact</Link>
                     </div>
                 </div>
 
@@ -62,23 +63,23 @@ export default function Footer(): JSX.Element {
                     </div>
 
                     <div className="flex flex-row justify-center gap-x-4 md:items-end">
-                        <a className="hover:brightness-140" href="https://www.facebook.com/">
+                        <a className="hover:brightness-140" href="https://www.facebook.com/" aria-label="View our Facebook page">
                             <img src={facebookIcon}/>
                         </a>
 
-                        <a className="hover:brightness-140" href="https://www.youtube.com/">
+                        <a className="hover:brightness-140" href="https://www.youtube.com/" aria-label="View our Youtube page">
                             <img src={youtubeIcon}/>
                         </a>
 
-                        <a className="hover:brightness-140" href="https://x.com/home">
+                        <a className="hover:brightness-140" href="https://x.com/home" aria-label="View our Twitter page">
                             <img src={twitterIcon}/>
                         </a>
 
-                        <a className="hover:brightness-140" href="https://pinterest.com/">
+                        <a className="hover:brightness-140" href="https://pinterest.com/" aria-label="View our Pinterest page">
                             <img src={pinterestIcon}/>
                         </a>
 
-                        <a className="hover:brightness-140" href="https://www.instagram.com/">
+                        <a className="hover:brightness-140" href="https://www.instagram.com/" aria-label="View our Instagram page">
                             <img src={instagramIcon}/>
                         </a>                                                                                              
                     </div>
