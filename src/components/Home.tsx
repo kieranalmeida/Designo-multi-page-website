@@ -55,7 +55,7 @@ export default function Home(): JSX.Element {
                     </p>
 
                     <div className="mt-5 2xl:mt-10">
-                        <Link className="text-dark-grey text-[0.9375rem] font-medium leading-px uppercase py-4.5 px-6.25 bg-white rounded-md transition hover:text-white hover:bg-light-peach" to="/about" aria-label="Learn more about our company">
+                        <Link className="text-dark-grey text-[0.9375rem] font-medium leading-px uppercase py-4.5 px-6.25 bg-white rounded-md transition hover:text-white hover:bg-light-peach focus:outline-none focus:ring-2 focus:ring-black" to="/about" aria-label="Learn more about our company">
                             Learn more
                         </Link>
                     </div>

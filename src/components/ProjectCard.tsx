@@ -17,7 +17,7 @@ type ProjectCardProps = {
 // "as React.CSSProperties" tells TypeScript that the inline style below is valid.
 export default function ProjectCard({url, images, children}: ProjectCardProps) {
     return (
-        <Link to={`/${url}`}>
+        <Link className="rounded-2xl focus:outline-offset-5" to={`/${url}`}>
             <div 
                 className="project-card flex flex-col justify-center items-center gap-y-3 h-62.5 px-14 text-white text-center uppercase bg-cover bg-center rounded-2xl md:h-50 2xl:h-full" 
                 style={{

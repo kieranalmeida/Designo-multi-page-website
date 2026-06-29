@@ -19,7 +19,7 @@ export default function Footer(): JSX.Element {
                     <p className="text-[0.9375rem] leading-6.25 mt-6 mb-8 md:text-[1rem]">Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.</p>
                 </div>
 
-                <Link className="text-dark-grey text-[0.9375rem] font-medium tracking-0.25 uppercase py-4.25 px-4.75 bg-white rounded-md transition hover:text-white hover:bg-light-peach" to="/contact" aria-label="Contact us">
+                <Link className="text-dark-grey text-[0.9375rem] font-medium tracking-0.25 uppercase py-4.25 px-4.75 bg-white rounded-md transition hover:text-white hover:bg-light-peach focus:outline-none focus:ring-2 focus:ring-black" to="/contact" aria-label="Contact us">
                     Get in touch
                 </Link>
                 
@@ -31,7 +31,7 @@ export default function Footer(): JSX.Element {
                 {/* Main footer first half */}
                 <div className="flex flex-col items-center gap-y-8 md:flex-row md:justify-between">
                     <Link to="/" aria-label="Go to home page">
-                        <img className="w-39.25" src={logoLight} alt="Designo logo"/>
+                        <img className="w-39.25 " src={logoLight} alt="Designo logo"/>
                     </Link>
 
                     <hr className="w-full border-[#979797] opacity-30 md:hidden"/>
