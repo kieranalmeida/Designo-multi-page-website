@@ -13,7 +13,7 @@ export default function Footer(): JSX.Element {
     return (
         <footer className="relative flex flex-col items-center mt-95 pt-63.25 px-6 pb-16 bg-black md:mt-82.75 md:pt-41.5 md:px-10 md:pb-20 2xl:mt-77.75 2xl:pt-36 2xl:px-41 xl:pb-18">
             {/* Top part of footer */}
-            <div className="absolute z-10 -top-50 left-6 right-6 flex flex-col items-center py-16 px-6 bg-peach rounded-2xl overflow-hidden md:-top-60 md:left-10 md:right-10 md:py-14.25 md:px-14.5 2xl:-top-55 2xl:flex-row 2xl:justify-between 2xl:pt-18 2xl:px-24 2xl:left-41 2xl:right-41">
+            <div className="absolute z-1 -top-50 left-6 right-6 flex flex-col items-center py-16 px-6 bg-peach rounded-2xl overflow-hidden md:-top-60 md:left-10 md:right-10 md:py-14.25 md:px-14.5 2xl:-top-55 2xl:flex-row 2xl:justify-between 2xl:pt-18 2xl:px-24 2xl:left-41 2xl:right-41">
                 <div className="max-w-114.75 text-white text-center 2xl:text-left ">
                     <h2 className="text-[2rem] font-medium leading-9 md:text-[2.5rem] md:leading-10">Let's talk about your project</h2>
                     <p className="text-[0.9375rem] leading-6.25 mt-6 mb-8 md:text-[1rem]">Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.</p>
