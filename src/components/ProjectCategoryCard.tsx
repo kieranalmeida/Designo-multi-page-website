@@ -2,7 +2,7 @@ import {Link} from "react-router-dom"
 import { FiChevronRight } from "react-icons/fi"
 
 // The component receives an object containing images for all three screen sizes for each of the three cards rendered.
-type ProjectCardProps = {
+type ProjectCategoryCardProps = {
     url: string,
     images: {
         mobile: string,
@@ -13,13 +13,13 @@ type ProjectCardProps = {
 }
 
 // The inline style defines three CSS variables that each assign their own background image (one for each of the three screen sizes). They are defined here in order to have access to the background images.
-// The project-card class, defined separately in the CSS, controls the active background image using media queries and the variables defined below.
+// The project-category-card class, defined separately in the CSS, controls the active background image using media queries and the variables defined below.
 // "as React.CSSProperties" tells TypeScript that the inline style below is valid.
-export default function ProjectCard({url, images, children}: ProjectCardProps) {
+export default function ProjectCategoryCard({url, images, children}: ProjectCategoryCardProps) {
     return (
         <Link className="rounded-2xl focus:outline-offset-5" to={`/${url}`}>
             <div 
-                className="project-card flex flex-col justify-center items-center gap-y-3 h-62.5 px-14 text-white text-center uppercase bg-cover bg-center rounded-2xl md:h-50 2xl:h-full" 
+                className="project-category-card flex flex-col justify-center items-center gap-y-3 h-62.5 px-14 text-white text-center uppercase bg-cover bg-center rounded-2xl md:h-50 2xl:h-full" 
                 style={{
                     "--mobile-bg": `url(${images.mobile})`,
                     "--tablet-bg": `url(${images.tablet})`,

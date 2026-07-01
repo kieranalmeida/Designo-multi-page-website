@@ -1,19 +1,19 @@
 import type {JSX} from "react"
 import {Link} from "react-router-dom"
 // Components
-import ProjectCard from "./ProjectCard"
+import ProjectCategoryCard from "./ProjectCategoryCard"
 // Hero section images
 import patternHeroHome from "../images/home/desktop/bg-pattern-hero-home.svg"
 import heroPhone from "../images/home/desktop/image-hero-phone.png"
-// Project section mobile images
+// Project categories section mobile images
 import webDesignMobile from "../images/home/mobile/image-web-design.jpg"
 import appDesignMobile from "../images/home/mobile/image-app-design.jpg"
 import graphicDesignMobile from "../images/home/mobile/image-graphic-design.jpg"
-// Project section tablet images
+// Project categories section tablet images
 import webDesignTablet from "../images/home/tablet/image-web-design.jpg"
 import appDesignTablet from "../images/home/tablet/image-app-design.jpg"
 import graphicDesignTablet from "../images/home/tablet/image-graphic-design.jpg"
-// Project section desktop images
+// Project categories section desktop images
 import webDesignDesktop from "../images/home/desktop/image-web-design-large.jpg"
 import appDesignDesktop from "../images/home/desktop/image-app-design.jpg"
 import graphicDesignDesktop from "../images/home/desktop/image-graphic-design.jpg"
@@ -65,21 +65,21 @@ export default function Home(): JSX.Element {
                 </div>
             </section>
 
-            {/* Projects section */}
-            <section className="mx-6 md:mx-10 2xl:mx-41 grid gap-y-6 2xl:grid-cols-2 2xl:grid-rows-2 2xl:gap-x-7.5 2xl:h-160" aria-label="Projects section">
-                {/* The three product cards display in a column on mobile and tablet screen sizes. For desktop and above, two columns with two rows are created, with the first card taking the first column and spanning both rows, and the other two evenly stacking in the other column by default. The cards grow in height up to the grid's height limit of 640px. */}
+            {/* Project categories section */}
+            <section className="grid gap-y-6 mx-6 md:mx-10 2xl:mx-41 2xl:grid-cols-2 2xl:grid-rows-2 2xl:gap-x-7.5 2xl:h-160" aria-label="Project categories section">
+                {/* The three project category cards display in a column on mobile and tablet screen sizes. For desktop and above, two columns with two rows are created, with the first card taking the first column and spanning both rows, and the other two evenly stacking in the other column by default. The cards grow in height up to the grid's height limit of 640px. */}
                 <div className="2xl:row-span-2">
-                    <ProjectCard url="web-design" images={webDesignImages }>Web design</ProjectCard>
+                    <ProjectCategoryCard url="web-design" images={webDesignImages }>Web design</ProjectCategoryCard>
                 </div>
 
-                <ProjectCard url="app-design" images={appDesignImages}>App design</ProjectCard>
+                <ProjectCategoryCard url="app-design" images={appDesignImages}>App design</ProjectCategoryCard>
                 
-                <ProjectCard url="graphic-design" images={graphicDesignImages}>Graphic design</ProjectCard>
+                <ProjectCategoryCard url="graphic-design" images={graphicDesignImages}>Graphic design</ProjectCategoryCard>
 
             </section>
 
             {/* About section */}
-            <section className="relative flex flex-col gap-y-20 mx-6 md:gap-y-8 md:mx-10 2xl:flex-row 2xl:gap-x-8 2xl:mx-41" aria-label="About section">
+            <section className="relative flex flex-col gap-y-20 mx-6 mb-77.75 md:gap-y-8 md:mx-10 md:mb-82.75 2xl:flex-row 2xl:gap-x-8 2xl:mx-41 2xl:mb-95" aria-label="About section">
 
                     <div className="relative flex flex-col items-center md:flex-row md:gap-x-12 2xl:flex-col">
                         <img src={illustrationPassionate}/>

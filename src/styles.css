@@ -38,25 +38,25 @@ body {
 }
 
 /* By default, apply the mobile background image to the product cards */
-.project-card {
+.project-category-card {
     background-image: linear-gradient(var(--overlay), var(--overlay)), var(--mobile-bg);
 }
 
 /* At the tablet breakpoint, apply the tablet background image to the product cards */
 @media (min-width: 768px) {
-    .project-card {
+    .project-category-card {
         background-image: linear-gradient(var(--overlay), var(--overlay)), var(--tablet-bg);
     }
 }
 
 /* At the desktop breakpoint, apply the desktop background image to the product cards */
 @media (min-width: 1536px) {
-    .project-card {
+    .project-category-card {
         background-image: linear-gradient(var(--overlay), var(--overlay)), var(--desktop-bg);
     }
 }
 
 /* Change the linear gradient to peach when hovering over/focused on a product card */
-.project-card:hover {
+.project-category-card:hover {
     --overlay: rgba(231, 129, 107, 0.8);
 }
