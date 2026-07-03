@@ -19,7 +19,7 @@ export default function Footer(): JSX.Element {
                     <p className="text-[0.9375rem] leading-6.25 mt-6 mb-8 md:text-[1rem] 2xl:mb-0">Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.</p>
                 </div>
 
-                <Link className="text-dark-grey text-[0.9375rem] font-medium tracking-0.25 uppercase py-4.25 px-4.75 bg-white rounded-md transition hover:text-white hover:bg-light-peach focus:outline-none focus:ring-2 focus:ring-black" to="/contact" aria-label="Contact us">
+                <Link className="text-dark-grey text-[0.9375rem] font-medium tracking-0.25 uppercase py-4.25 px-4.75 bg-white rounded-md hover:text-white hover:bg-light-peach focus:outline-none focus:ring-2 focus:ring-black" to="/contact" aria-label="Contact us">
                     Get in touch
                 </Link>
                 

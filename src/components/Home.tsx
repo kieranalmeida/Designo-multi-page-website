@@ -54,7 +54,7 @@ export default function Home(): JSX.Element {
                         With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, and engaging brand experiences. Find out more about our services.
                     </p>
 
-                    <Link className="text-dark-grey text-[0.9375rem] font-medium tracking-[0.0625rem] uppercase py-4.5 px-6.25 bg-white rounded-md transition hover:text-white hover:bg-light-peach focus:outline-none focus:ring-2 focus:ring-black" to="/about" aria-label="Learn more about our company">
+                    <Link className="text-dark-grey text-[0.9375rem] font-medium tracking-[0.0625rem] uppercase py-4.5 px-6.25 bg-white rounded-md hover:text-white hover:bg-light-peach focus:outline-none focus:ring-2 focus:ring-black" to="/about" aria-label="Learn more about our company">
                         Learn more
                     </Link>
                 </div>
@@ -69,12 +69,12 @@ export default function Home(): JSX.Element {
             <section className="grid gap-y-6 mx-6 md:mx-10 2xl:mx-41 2xl:grid-cols-2 2xl:grid-rows-2 2xl:gap-x-7.5 2xl:h-160" aria-label="Project categories section">
                 {/* The three project category cards display in a column on mobile and tablet screen sizes. For desktop and above, two columns with two rows are created, with the first card taking the first column and spanning both rows, and the other two evenly stacking in the other column by default. The cards grow in height up to the grid's height limit of 640px. */}
                 <div className="2xl:row-span-2">
-                    <ProjectCategoryCard url="web-design" images={webDesignImages }>Web design</ProjectCategoryCard>
+                    <ProjectCategoryCard url="web-design" images={webDesignImages} categoryName={"Web design"}/>
                 </div>
 
-                <ProjectCategoryCard url="app-design" images={appDesignImages}>App design</ProjectCategoryCard>
+                <ProjectCategoryCard url="app-design" images={appDesignImages} categoryName={"App design"}/>
                 
-                <ProjectCategoryCard url="graphic-design" images={graphicDesignImages}>Graphic design</ProjectCategoryCard>
+                <ProjectCategoryCard url="graphic-design" images={graphicDesignImages} categoryName={"Graphic design"}/>
 
             </section>
 
@@ -113,7 +113,7 @@ export default function Home(): JSX.Element {
 
             </section>
 
-            <img className="absolute -z-2 w-251.5 -bottom-66 right-0 rotate-180 hidden 2xl:block" src={patternLeaf} alt="" aria-hidden="true"/>
+            <img className="absolute -z-2 w-251.5 bottom-18.5 right-0 rotate-180 hidden 2xl:block" src={patternLeaf} alt="" aria-hidden="true"/>
         </main>
     )
 }
