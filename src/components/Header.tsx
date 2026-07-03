@@ -44,6 +44,7 @@ export default function Header(): JSX.Element {
         if (menuOpen) {
             setMenuOpen(false)
         }
+        window.scrollTo(0, 0)
 
     }, [location.pathname])
 

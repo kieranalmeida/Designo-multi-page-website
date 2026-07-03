@@ -68,7 +68,7 @@ export default function AppDesign(): JSX.Element {
                 />
                 <ProjectCard 
                     title={"Todo"} 
-                    desc={"A todo app that features cloud sync with light and dark mode"} 
+                    desc={"A todo app that features cloud sync with light and dark mode"}
                     image={todoPreview}
                 />
                 <ProjectCard 
