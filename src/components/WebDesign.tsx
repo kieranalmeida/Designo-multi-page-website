@@ -86,7 +86,7 @@ export default function WebDesign(): JSX.Element {
             </section>
 
             {/* Project categories section */}
-            <section className="grid gap-y-6 mx-6 md:mx-10 mb-71.5 md:mb-95 2xl:grid-cols-2 2xl:gap-x-7.5 2xl:mx-41 2xl:mb-95 2xl:h-77" aria-label="Project categories section">
+            <section className="grid gap-y-6 mx-6 md:mx-10 mb-71.5 md:mb-95 2xl:grid-cols-2 2xl:gap-x-7.5 2xl:mx-41 2xl:h-77" aria-label="Project categories section">
                 <ProjectCategoryCard url="app-design" images={appDesignImages} categoryName={"App design"} />
                     
                 <ProjectCategoryCard url="graphic-design" images={graphicDesignImages} categoryName={"Graphic design"} />
