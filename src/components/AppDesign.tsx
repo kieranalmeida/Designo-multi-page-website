@@ -87,5 +87,3 @@ export default function AppDesign(): JSX.Element {
         </main>
     )
 }
-
-// Get sent to top of page when navigating

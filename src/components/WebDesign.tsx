@@ -39,6 +39,7 @@ export default function WebDesign(): JSX.Element {
     return (
         <main className="relative flex flex-col gap-y-30 2xl:gap-y-40" aria-label="Hero section">
             <img className="absolute -z-2 top-31.5 w-251.5 hidden 2xl:block" src={patternLeaf} alt="" aria-hidden="true"/>
+            
             {/* Hero section */}
             <section className="relative flex flex-col items-center z-0 h-80 py-26.25 px-6 bg-peach overflow-hidden md:h-63 md:mx-10 md:py-16 md:px-38.25 md:rounded-2xl 2xl:mx-41 2xl:px-47.75">
                 <div className="flex flex-col gap-y-6 text-white text-center max-w-96">
