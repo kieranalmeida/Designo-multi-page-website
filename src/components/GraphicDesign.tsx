@@ -1,36 +1,17 @@
 import type {JSX} from "react"
 // Components
-import ProjectCard from "./ProjectCard"
+import ProjectCardGrid from "./ProjectCardGrid"
 import ProjectCategoryCard from "./ProjectCategoryCard"
 // Hero section images
 import patternDesignPagesTablet from "../images/shared/tablet/bg-pattern-design-pages-intro-tablet.svg"
 import patternDesignPagesMobile from "../images/shared/mobile/bg-pattern-design-pages-intro-mobile.svg"
 import patternIntroGraphic from "../images/graphic-design/desktop/bg-pattern-intro-graphic.svg"
-// Project section images
-import changePreview from "../images/graphic-design/desktop/image-change.jpg"
-import boxedWaterPreview from "../images/graphic-design/desktop/image-boxed-water.jpg"
-import sciencePreview from "../images/graphic-design/desktop/image-science.jpg"
+// Data
+import {graphicDesignProjects} from "../data/project-data"
 // Project categories section images
-import webDesignMobile from "../images/home/mobile/image-web-design.jpg"
-import webDesignTablet from "../images/home/tablet/image-web-design.jpg"
-import webDesignDesktop from "../images/home/desktop/image-web-design-large.jpg"
-import appDesignMobile from "../images/home/mobile/image-app-design.jpg"
-import appDesignTablet from "../images/home/tablet/image-app-design.jpg"
-import appDesignDesktop from "../images/home/desktop/image-app-design.jpg"
+import {webDesignImages, appDesignImages} from "../data/project-category-card-images"
 // Other images
 import patternLeaf from "../images/shared/desktop/bg-pattern-leaf.svg"
-
-const webDesignImages = {
-    mobile: webDesignMobile,
-    tablet: webDesignTablet,
-    desktop: webDesignDesktop
-}
-
-const appDesignImages = {
-    mobile: appDesignMobile,
-    tablet: appDesignTablet,
-    desktop: appDesignDesktop
-}
 
 export default function GraphicDesign(): JSX.Element {
     return (
@@ -51,23 +32,7 @@ export default function GraphicDesign(): JSX.Element {
             </section>
 
             {/* Projects section */}
-            <section className="grid gap-y-10 mx-6 md:gap-y-8 md:mx-10 2xl:grid-cols-3 2xl:gap-x-7.5 2xl:mx-41" aria-label="Projects section">
-                <ProjectCard 
-                    title={"Tim Brown"} 
-                    desc={"A book cover designed for Tim Brown's new release, 'Change'"}
-                    image={changePreview}
-                />
-                <ProjectCard 
-                    title={"Boxed Water"} 
-                    desc={"A simple packaging concept made for Boxed Water"} 
-                    image={boxedWaterPreview}
-                />
-                <ProjectCard 
-                    title={"Science!"} 
-                    desc={"A poster made in collaboration with the Federal Art Project"} 
-                    image={sciencePreview}
-                />
-            </section>
+            <ProjectCardGrid projects={graphicDesignProjects}/>
 
             {/* Project categories section */}
             <section className="grid gap-y-6 mx-6 md:mx-10 mb-71.5 md:mb-95 2xl:grid-cols-2 2xl:gap-x-7.5 2xl:mx-41 2xl:h-77" aria-label="Project categories section">

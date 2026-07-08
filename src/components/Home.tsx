@@ -6,15 +6,7 @@ import ProjectCategoryCard from "./ProjectCategoryCard"
 import patternHeroHome from "../images/home/desktop/bg-pattern-hero-home.svg"
 import heroPhone from "../images/home/desktop/image-hero-phone.png"
 // Project categories section images
-import webDesignMobile from "../images/home/mobile/image-web-design.jpg"
-import webDesignTablet from "../images/home/tablet/image-web-design.jpg"
-import webDesignDesktop from "../images/home/desktop/image-web-design-large.jpg"
-import appDesignTablet from "../images/home/tablet/image-app-design.jpg"
-import appDesignMobile from "../images/home/mobile/image-app-design.jpg"
-import appDesignDesktop from "../images/home/desktop/image-app-design.jpg"
-import graphicDesignMobile from "../images/home/mobile/image-graphic-design.jpg"
-import graphicDesignTablet from "../images/home/tablet/image-graphic-design.jpg"
-import graphicDesignDesktop from "../images/home/desktop/image-graphic-design.jpg"
+import {webDesignImages, appDesignImages, graphicDesignImages} from "../data/project-category-card-images"
 // About section images
 import illustrationPassionate from "../images/home/desktop/illustration-passionate.svg"
 import illustrationFriendly from "../images/home/desktop/illustration-friendly.svg"
@@ -22,24 +14,6 @@ import illustrationResourceful from "../images/home/desktop/illustration-resourc
 import patternSmallCircle from "../images/shared/desktop/bg-pattern-small-circle.svg"
 // Other images
 import patternLeaf from "../images/shared/desktop/bg-pattern-leaf.svg"
-
-const webDesignImages = {
-    mobile: webDesignMobile,
-    tablet: webDesignTablet,
-    desktop: webDesignDesktop
-}
-
-const appDesignImages = {
-    mobile: appDesignMobile,
-    tablet: appDesignTablet,
-    desktop: appDesignDesktop
-}
-
-const graphicDesignImages = {
-    mobile: graphicDesignMobile,
-    tablet: graphicDesignTablet,
-    desktop: graphicDesignDesktop
-}
 
 export default function Home(): JSX.Element {
     return (

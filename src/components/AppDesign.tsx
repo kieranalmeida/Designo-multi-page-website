@@ -1,37 +1,16 @@
 import type {JSX} from "react"
 // Components
-import ProjectCard from "./ProjectCard"
+import ProjectCardGrid from "./ProjectCardGrid"
 import ProjectCategoryCard from "./ProjectCategoryCard"
 // Hero section images
 import patternDesignPagesMobile from "../images/shared/mobile/bg-pattern-design-pages-intro-mobile.svg"
 import patternDesignPagesTablet from "../images/shared/tablet/bg-pattern-design-pages-intro-tablet.svg"
-// Project section images
-import airfilterPreview from "../images/app-design/desktop/image-airfilter.jpg"
-import eyecamPreview from "../images/app-design/desktop/image-eyecam.jpg"
-import faceitPreview from "../images/app-design/desktop/image-airfilter.jpg"
-import todoPreview from "../images/app-design/desktop/image-todo.jpg"
-import loopstudiosPreview from "../images/app-design/desktop/image-loopstudios.jpg"
+// Data
+import {appDesignProjects} from "../data/project-data"
 // Project categories section images
-import webDesignMobile from "../images/home/mobile/image-web-design.jpg"
-import webDesignTablet from "../images/home/tablet/image-web-design.jpg"
-import webDesignDesktop from "../images/home/desktop/image-web-design-small.jpg"
-import graphicDesignMobile from "../images/home/mobile/image-graphic-design.jpg"
-import graphicDesignTablet from "../images/home/tablet/image-graphic-design.jpg"
-import graphicDesignDesktop from "../images/home/desktop/image-graphic-design.jpg"
+import {webDesignImages, graphicDesignImages} from "../data/project-category-card-images"
 // Other images
 import patternLeaf from "../images/shared/desktop/bg-pattern-leaf.svg"
-
-const webDesignImages = {
-    mobile: webDesignMobile,
-    tablet: webDesignTablet,
-    desktop: webDesignDesktop
-}
-
-const graphicDesignImages = {
-    mobile: graphicDesignMobile,
-    tablet: graphicDesignTablet,
-    desktop: graphicDesignDesktop
-}
 
 export default function AppDesign(): JSX.Element {
     return (
@@ -51,33 +30,7 @@ export default function AppDesign(): JSX.Element {
             </section>
 
             {/* Projects section */}
-            <section className="grid gap-y-10 mx-6 md:gap-y-8 md:mx-10 2xl:grid-cols-3 2xl:gap-x-7.5 2xl:mx-41" aria-label="Projects section">
-                <ProjectCard 
-                    title={"Airfilter"} 
-                    desc={"Solving the problem of poor indoor air quality by filtering the air"}
-                    image={airfilterPreview}
-                />
-                <ProjectCard 
-                    title={"Eyecam"} 
-                    desc={"Product that lets you edit your favorite photos and videos at any time"} 
-                    image={eyecamPreview}
-                />
-                <ProjectCard 
-                    title={"Faceit"} 
-                    desc={"Get to meet your favorite internet superstar with the faceit app"} 
-                    image={faceitPreview}
-                />
-                <ProjectCard 
-                    title={"Todo"} 
-                    desc={"A todo app that features cloud sync with light and dark mode"}
-                    image={todoPreview}
-                />
-                <ProjectCard 
-                    title={"Loopstudios"} 
-                    desc={"A VR experience app made for Loopstudios"} 
-                    image={loopstudiosPreview}
-                />
-            </section>
+            <ProjectCardGrid projects={appDesignProjects}/>
 
             {/* Project categories section */}
             <section className="grid gap-y-6 mx-6 md:mx-10 mb-71.5 md:mb-95 2xl:grid-cols-2 2xl:gap-x-7.5 2xl:mx-41 2xl:h-77" aria-label="Project categories section">
