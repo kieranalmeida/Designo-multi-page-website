@@ -5,24 +5,22 @@ import ProjectCategoryCard from "./ProjectCategoryCard"
 // Hero section images
 import patternHeroHome from "../images/home/desktop/bg-pattern-hero-home.svg"
 import heroPhone from "../images/home/desktop/image-hero-phone.png"
-// Project categories section mobile images
+// Project categories section images
 import webDesignMobile from "../images/home/mobile/image-web-design.jpg"
-import appDesignMobile from "../images/home/mobile/image-app-design.jpg"
-import graphicDesignMobile from "../images/home/mobile/image-graphic-design.jpg"
-// Project categories section tablet images
 import webDesignTablet from "../images/home/tablet/image-web-design.jpg"
-import appDesignTablet from "../images/home/tablet/image-app-design.jpg"
-import graphicDesignTablet from "../images/home/tablet/image-graphic-design.jpg"
-// Project categories section desktop images
 import webDesignDesktop from "../images/home/desktop/image-web-design-large.jpg"
+import appDesignTablet from "../images/home/tablet/image-app-design.jpg"
+import appDesignMobile from "../images/home/mobile/image-app-design.jpg"
 import appDesignDesktop from "../images/home/desktop/image-app-design.jpg"
+import graphicDesignMobile from "../images/home/mobile/image-graphic-design.jpg"
+import graphicDesignTablet from "../images/home/tablet/image-graphic-design.jpg"
 import graphicDesignDesktop from "../images/home/desktop/image-graphic-design.jpg"
 // About section images
 import illustrationPassionate from "../images/home/desktop/illustration-passionate.svg"
 import illustrationFriendly from "../images/home/desktop/illustration-friendly.svg"
 import illustrationResourceful from "../images/home/desktop/illustration-resourceful.svg"
 import patternSmallCircle from "../images/shared/desktop/bg-pattern-small-circle.svg"
-// Other
+// Other images
 import patternLeaf from "../images/shared/desktop/bg-pattern-leaf.svg"
 
 const webDesignImages = {
@@ -59,7 +57,7 @@ export default function Home(): JSX.Element {
                     </Link>
                 </div>
 
-                <div className="flex justify-center">
+                <div className="absolute inset-0 pointer-events-none flex justify-center">
                     <img className="absolute z-1 top-75 max-w-none md:top-72 2xl:-right-20 2xl:-top-8" src={heroPhone} alt="Example of a website design displayed on a mobile phone"/>
                     <img className="absolute -right-56 top-25 max-w-none md:-right-21 2xl:right-0 2xl:top-0" src={patternHeroHome} alt="" aria-hidden="true"/>
                 </div>

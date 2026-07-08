@@ -2,25 +2,24 @@ import type {JSX} from "react"
 // Components
 import ProjectCard from "./ProjectCard"
 import ProjectCategoryCard from "./ProjectCategoryCard"
-// Images
-import patternDesignPagesTablet from "../images/shared/tablet/bg-pattern-design-pages-intro-tablet.svg"
+// Hero section images
 import patternDesignPagesMobile from "../images/shared/mobile/bg-pattern-design-pages-intro-mobile.svg"
-import patternLeaf from "../images/shared/desktop/bg-pattern-leaf.svg"
-// Project preview images
+import patternDesignPagesTablet from "../images/shared/tablet/bg-pattern-design-pages-intro-tablet.svg"
+// Project section images
 import airfilterPreview from "../images/app-design/desktop/image-airfilter.jpg"
 import eyecamPreview from "../images/app-design/desktop/image-eyecam.jpg"
 import faceitPreview from "../images/app-design/desktop/image-airfilter.jpg"
 import todoPreview from "../images/app-design/desktop/image-todo.jpg"
 import loopstudiosPreview from "../images/app-design/desktop/image-loopstudios.jpg"
-// Project categories section mobile images
+// Project categories section images
 import webDesignMobile from "../images/home/mobile/image-web-design.jpg"
-import graphicDesignMobile from "../images/home/mobile/image-graphic-design.jpg"
-// Project categories section tablet images
 import webDesignTablet from "../images/home/tablet/image-web-design.jpg"
-import graphicDesignTablet from "../images/home/tablet/image-graphic-design.jpg"
-// Project categories section desktop images
 import webDesignDesktop from "../images/home/desktop/image-web-design-small.jpg"
+import graphicDesignMobile from "../images/home/mobile/image-graphic-design.jpg"
+import graphicDesignTablet from "../images/home/tablet/image-graphic-design.jpg"
 import graphicDesignDesktop from "../images/home/desktop/image-graphic-design.jpg"
+// Other images
+import patternLeaf from "../images/shared/desktop/bg-pattern-leaf.svg"
 
 const webDesignImages = {
     mobile: webDesignMobile,
@@ -45,8 +44,10 @@ export default function AppDesign(): JSX.Element {
                     <p className="text-[0.9375rem] leading-6.25 md:text-[1rem]">Our mobile designs bring intuitive digital solutions to your customers right at their fingertips.</p>
                 </div>
 
-                <img className="absolute -z-1 rotate-270 top-35 -right-40 max-w-none md:hidden" src={patternDesignPagesMobile} aria-hidden="true"/>
-                <img className="absolute -z-1 -top-43 -right-33 max-w-none hidden md:block 2xl:rotate-180 2xl:right-73.75" src={patternDesignPagesTablet} aria-hidden="true"/>
+                <div className="absolute inset-0 pointer-events-none">
+                    <img className="absolute -z-1 rotate-270 top-35 -right-40 max-w-none md:hidden" src={patternDesignPagesMobile} aria-hidden="true"/>
+                    <img className="absolute -z-1 -top-43 -right-33 max-w-none hidden md:block 2xl:rotate-180 2xl:right-73.75" src={patternDesignPagesTablet} aria-hidden="true"/>
+                </div>
             </section>
 
             {/* Projects section */}

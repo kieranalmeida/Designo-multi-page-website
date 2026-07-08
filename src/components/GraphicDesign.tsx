@@ -2,24 +2,23 @@ import type {JSX} from "react"
 // Components
 import ProjectCard from "./ProjectCard"
 import ProjectCategoryCard from "./ProjectCategoryCard"
-// Images
+// Hero section images
 import patternDesignPagesTablet from "../images/shared/tablet/bg-pattern-design-pages-intro-tablet.svg"
 import patternDesignPagesMobile from "../images/shared/mobile/bg-pattern-design-pages-intro-mobile.svg"
 import patternIntroGraphic from "../images/graphic-design/desktop/bg-pattern-intro-graphic.svg"
-import patternLeaf from "../images/shared/desktop/bg-pattern-leaf.svg"
-// Project preview images
+// Project section images
 import changePreview from "../images/graphic-design/desktop/image-change.jpg"
 import boxedWaterPreview from "../images/graphic-design/desktop/image-boxed-water.jpg"
 import sciencePreview from "../images/graphic-design/desktop/image-science.jpg"
-// Project categories section mobile images
+// Project categories section images
 import webDesignMobile from "../images/home/mobile/image-web-design.jpg"
-import appDesignMobile from "../images/home/mobile/image-app-design.jpg"
-// Project categories section tablet images
 import webDesignTablet from "../images/home/tablet/image-web-design.jpg"
-import appDesignTablet from "../images/home/tablet/image-app-design.jpg"
-// Project categories section desktop images
 import webDesignDesktop from "../images/home/desktop/image-web-design-large.jpg"
+import appDesignMobile from "../images/home/mobile/image-app-design.jpg"
+import appDesignTablet from "../images/home/tablet/image-app-design.jpg"
 import appDesignDesktop from "../images/home/desktop/image-app-design.jpg"
+// Other images
+import patternLeaf from "../images/shared/desktop/bg-pattern-leaf.svg"
 
 const webDesignImages = {
     mobile: webDesignMobile,
@@ -44,9 +43,11 @@ export default function GraphicDesign(): JSX.Element {
                     <p className="text-[0.9375rem] leading-6.25 md:text-[1rem]">We deliver eye-catching branding materials that are tailored to meet your business objectives.</p>
                 </div>
 
-                <img className="absolute -z-1 rotate-270 top-35 -right-40 max-w-none md:hidden" src={patternDesignPagesMobile} aria-hidden="true"/>
-                <img className="absolute -z-1 -top-43 -right-33 max-w-none hidden md:block 2xl:hidden" src={patternDesignPagesTablet} aria-hidden="true"/>
-                <img className="absolute -z-1 -top-43 left-0 max-w-none hidden 2xl:block" src={patternIntroGraphic} aria-hidden="true"/>
+                <div className="absolute inset-0 pointer-events-none">
+                    <img className="absolute -z-1 rotate-270 top-35 -right-40 max-w-none md:hidden" src={patternDesignPagesMobile} aria-hidden="true"/>
+                    <img className="absolute -z-1 -top-43 -right-33 max-w-none hidden md:block 2xl:hidden" src={patternDesignPagesTablet} aria-hidden="true"/>
+                    <img className="absolute -z-1 -top-43 left-0 max-w-none hidden 2xl:block" src={patternIntroGraphic} aria-hidden="true"/>
+                </div>
             </section>
 
             {/* Projects section */}

@@ -1,6 +1,7 @@
 import type {JSX} from "react"
 import {useState, useRef, useEffect} from "react"
 import {Link, NavLink, useLocation} from "react-router-dom"
+// Images
 import logoDark from "../images/shared/desktop/logo-dark.png"
 import openHamburgerButton from "../images/shared/mobile/icon-hamburger.svg"
 import closeHamburgerButton from "../images/shared/mobile/icon-close.svg"

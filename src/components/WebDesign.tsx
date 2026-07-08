@@ -2,26 +2,25 @@ import type {JSX} from "react"
 // Components
 import ProjectCard from "./ProjectCard"
 import ProjectCategoryCard from "./ProjectCategoryCard"
-// Images
-import patternDesignPagesTablet from "../images/shared/tablet/bg-pattern-design-pages-intro-tablet.svg"
+// Hero section images
 import patternDesignPagesMobile from "../images/shared/mobile/bg-pattern-design-pages-intro-mobile.svg"
-import patternLeaf from "../images/shared/desktop/bg-pattern-leaf.svg"
-// Project preview images
+import patternDesignPagesTablet from "../images/shared/tablet/bg-pattern-design-pages-intro-tablet.svg"
+// Project section images
 import expressPreview from "../images/web-design/desktop/image-express.jpg"
 import transferPreview from "../images/web-design/desktop/image-transfer.jpg"
 import photonPreview from "../images/web-design/desktop/image-photon.jpg"
 import builderPreview from "../images/web-design/desktop/image-builder.jpg"
 import blogrPreview from "../images/web-design/desktop/image-blogr.jpg"
 import campPreview from "../images/web-design/desktop/image-camp.jpg"
-// Project categories section mobile images
+// Project categories section images
 import appDesignMobile from "../images/home/mobile/image-app-design.jpg"
-import graphicDesignMobile from "../images/home/mobile/image-graphic-design.jpg"
-// Project categories section tablet images
 import appDesignTablet from "../images/home/tablet/image-app-design.jpg"
-import graphicDesignTablet from "../images/home/tablet/image-graphic-design.jpg"
-// Project categories section desktop images
 import appDesignDesktop from "../images/home/desktop/image-app-design.jpg"
+import graphicDesignMobile from "../images/home/mobile/image-graphic-design.jpg"
+import graphicDesignTablet from "../images/home/tablet/image-graphic-design.jpg"
 import graphicDesignDesktop from "../images/home/desktop/image-graphic-design.jpg"
+// Other images
+import patternLeaf from "../images/shared/desktop/bg-pattern-leaf.svg"
 
 const appDesignImages = {
     mobile: appDesignMobile,
@@ -47,8 +46,10 @@ export default function WebDesign(): JSX.Element {
                     <p className="text-[0.9375rem] leading-6.25 md:text-[1rem]">We build websites that serve as powerful marketing tools and bring memorable brand experiences.</p>
                 </div>
 
-                <img className="absolute -z-1 rotate-270 top-35 -right-40 max-w-none md:hidden" src={patternDesignPagesMobile} aria-hidden="true"/>
-                <img className="absolute -z-1 -top-43 -right-33 max-w-none hidden md:block 2xl:right-0" src={patternDesignPagesTablet} aria-hidden="true"/>
+                <div className="absolute inset-0 pointer-events-none">
+                    <img className="absolute -z-1 rotate-270 top-35 -right-40 max-w-none md:hidden" src={patternDesignPagesMobile} alt="" aria-hidden="true"/>
+                    <img className="absolute -z-1 -top-43 -right-33 max-w-none hidden md:block 2xl:right-0" src={patternDesignPagesTablet} alt="" aria-hidden="true"/>
+                </div>
             </section>
 
             {/* Projects section */}
