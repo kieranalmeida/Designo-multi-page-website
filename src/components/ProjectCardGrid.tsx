@@ -22,10 +22,3 @@ export default function ProjectCardGrid({projects}: ProjectCardGridProps): JSX.E
         </section>
     )
 }
-
-// Create array of objects for each project page to be iterated over and produce a ProductCard for each one
-// Use the title, description and preview image in each object to construct the ProductCard
-// The array of objects is passed into each instance of ProjectCardGrid (3)
-
-// Receives an array of objects (an array of Project objects)
-// Iterastes over each Project object in the array of Project objects

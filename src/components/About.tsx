@@ -44,7 +44,7 @@ export default function About(): JSX.Element {
             </section>
 
             {/* Section 2 */}
-            <section className="relative flex flex-col items-center bg-[#FDF3F0] overflow-hidden md:mx-10 md:rounded-2xl 2xl:flex-row 2xl:justify-between 2xl:mx-41" aria-labelledby="world-class-talent-heading">
+            <section className="relative flex flex-col items-center bg-seashell overflow-hidden md:mx-10 md:rounded-2xl 2xl:flex-row 2xl:justify-between 2xl:mx-41" aria-labelledby="world-class-talent-heading">
                 <div className="z-1 w-full 2xl:w-119" aria-hidden="true">
                     <img className="w-full h-80 object-cover md:hidden" src={worldClassTalentMobile} alt=""/>
                     <img className="w-full h-80 object-cover hidden md:block 2xl:hidden" src={worldClassTalentTablet} alt=""/>
@@ -69,7 +69,7 @@ export default function About(): JSX.Element {
             <LocationsSection />
 
             {/* Section 4 */}
-            <section className="relative flex flex-col items-center bg-[#FDF3F0] overflow-hidden mb-77.5 md:mx-10 md:rounded-2xl 2xl:flex-row-reverse 2xl:justify-between 2xl:mx-41 md:mb-95" aria-labelledby="the-real-deal-heading">
+            <section className="relative flex flex-col items-center bg-seashell overflow-hidden mb-77.5 md:mx-10 md:rounded-2xl 2xl:flex-row-reverse 2xl:justify-between 2xl:mx-41 md:mb-95" aria-labelledby="the-real-deal-heading">
                 <div className="z-1 w-full 2xl:w-119" aria-hidden="true">
                     <img className="w-full h-80 object-cover md:hidden" src={realDealMobile} alt=""/>
                     <img className="w-full h-80 object-cover hidden md:block 2xl:hidden" src={realDealTablet} alt=""/>
