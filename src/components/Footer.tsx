@@ -1,5 +1,5 @@
 import type {JSX} from "react"
-import {Link} from "react-router-dom"
+import {Link, useLocation} from "react-router-dom"
 // Images
 import patternCallToAction from "../images/shared/desktop/bg-pattern-call-to-action.svg"
 import logoLight from "../images/shared/desktop/logo-light.png"
@@ -10,9 +10,18 @@ import pinterestIcon from "../images/shared/desktop/icon-pinterest.svg"
 import instagramIcon from "../images/shared/desktop/icon-instagram.svg"
 
 export default function Footer(): JSX.Element {
+    const location = useLocation()
+
+    const footerClass = `
+        relative flex flex-col items-center 
+        ${location.pathname !== "/contact" ? "pt-63.25 md:pt-41.5 2xl:pt-36" : "pt-16 md:pt-20 2xl:pt-18"}
+        px-6 pb-16 md:px-10 md:pb-20 2xl:px-41 xl:pb-18 bg-black
+    `
+
     return (
-        <footer className="relative flex flex-col items-center pt-63.25 px-6 pb-16 bg-black md:pt-41.5 md:px-10 md:pb-20 2xl:pt-36 2xl:px-41 xl:pb-18">
-            {/* Top part of footer */}
+        <footer className={footerClass}>
+        {/* Top part of footer */}
+        {location.pathname !== "/contact" &&
             <div className="absolute z-1 -top-50 left-6 right-6 flex flex-col items-center py-16 px-6 bg-peach rounded-2xl overflow-hidden md:-top-60 md:left-10 md:right-10 md:py-14.25 md:px-14.5 2xl:-top-55 2xl:flex-row 2xl:justify-between 2xl:pt-18 2xl:px-24 2xl:left-41 2xl:right-41 ">
                 <div className="max-w-114.75 text-white text-center 2xl:text-left">
                     <h2 className="text-[2rem] font-medium leading-9 md:text-[2.5rem] md:leading-10">Let's talk about your project</h2>
@@ -25,6 +34,7 @@ export default function Footer(): JSX.Element {
                 
                 <img className="absolute -z-1 max-w-none -right-80 -bottom-36 md:-right-38 2xl:right-0" src={patternCallToAction}/>
             </div>
+        }
 
             {/* Main footer */}
             <div className="flex flex-col gap-y-10 w-full">

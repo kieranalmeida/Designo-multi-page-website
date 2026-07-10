@@ -102,9 +102,9 @@ export default function Header(): JSX.Element {
             
             {/* Hamburger menu */}
             <div className={`absolute z-4 w-full flex-col py-12 bg-black ${menuOpen ? "flex" : "hidden"}`} ref={menuRef}>
-                    <NavLink className={hamburgerNavLinkClass} to="/about" aria-label="Learn more about our company">Our Company</NavLink>
-                    <NavLink className={hamburgerNavLinkClass} to="/locations" aria-label="Check what locations we operate in">Locations</NavLink> 
-                    <NavLink className={hamburgerNavLinkClass} to="/contact" aria-label="Contact us">Contact</NavLink>
+                <NavLink className={hamburgerNavLinkClass} to="/about" aria-label="Learn more about our company">Our Company</NavLink>
+                <NavLink className={hamburgerNavLinkClass} to="/locations" aria-label="Check what locations we operate in">Locations</NavLink> 
+                <NavLink className={hamburgerNavLinkClass} to="/contact" aria-label="Contact us">Contact</NavLink>
             </div>
 
             {/* Places a black, transparent background over the entire page, excluding the header and hamburger menu, while the hamburger menu is open */}

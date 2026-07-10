@@ -10,7 +10,7 @@ export default function Locations(): JSX.Element {
                 {/* Canada location */}
                 <div className="flex flex-col md:gap-y-7.5 2xl:flex-row-reverse 2xl:gap-x-7.5">
                     {/* Container 1 */}
-                    <div className="w-full h-80 md:h-81.5 2xl:w-1/4 rounded-2xl overflow-hidden" id="canada-map">
+                    <div className="w-full h-80 md:h-81.5 2xl:w-1/4 rounded-2xl" id="canada-map">
                         <Map coords={[43.710454, -79.248552]}/>
                     </div>
                     

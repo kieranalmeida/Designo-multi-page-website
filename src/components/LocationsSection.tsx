@@ -1,5 +1,5 @@
 import type {JSX} from "react"
-import {Link} from "react-router-dom"
+import {Link, useLocation} from "react-router-dom"
 // Images
 import illustrationCanada from "../images/shared/desktop/illustration-canada.svg"
 import illustrationAustralia from "../images/shared/desktop/illustration-australia.svg"
@@ -7,8 +7,15 @@ import illustrationUnitedKingdom from "../images/shared/desktop/illustration-uni
 import patternSmallCircle from "../images/shared/desktop/bg-pattern-small-circle.svg"
 
 export default function LocationsSection(): JSX.Element {
+    const location = useLocation()
+
+    const sectionClass = `
+        flex flex-col gap-y-12 mx-6 md:mx-10 2xl:flex-row 2xl:justify-between 2xl:mx-41 
+        ${location.pathname === "/contact" && "mb-30 2xl:mb-40"}
+    `
+    
     return (
-            <section className="flex flex-col gap-y-12 mx-6 md:mx-10 2xl:flex-row 2xl:justify-between 2xl:mx-41" aria-label="Our locations">
+            <section className={sectionClass} aria-label="Our locations">
                 <div className="flex flex-col items-center">
                     <div className="relative" aria-hidden="true">
                         <img className="relative z-1" src={illustrationCanada} alt=""/>
