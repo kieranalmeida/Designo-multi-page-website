@@ -16,7 +16,7 @@ export default function ProjectCardGrid({projects}: ProjectCardGridProps): JSX.E
         <section className="grid gap-y-10 mx-6 md:gap-y-8 md:mx-10 2xl:grid-cols-3 2xl:gap-x-7.5 2xl:mx-41" aria-label="Projects section">
             {
                 projects.map( ({title, desc, image}: Project): JSX.Element => {
-                    return <ProjectCard title={title} desc={desc} image={image}/>
+                    return <ProjectCard key={title} title={title} desc={desc} image={image}/>
                 })
             }
         </section>
