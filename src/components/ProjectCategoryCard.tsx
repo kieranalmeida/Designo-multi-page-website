@@ -19,7 +19,7 @@ export default function ProjectCategoryCard({url, images, categoryName}: Project
     return (
         <Link className="rounded-2xl focus:outline-offset-5" to={`/${url}`}>
             <div 
-                className="project-category-card flex flex-col justify-center items-center gap-y-3 h-62.5 px-14 text-white text-center uppercase bg-cover bg-center rounded-2xl md:h-50 2xl:h-full" 
+                className="project-category-card flex flex-col justify-center items-center gap-y-3 h-62.5 md:h-50 2xl:h-full px-14 text-white text-center uppercase bg-cover bg-center rounded-2xl" 
                 style={{
                     "--mobile-bg": `url(${images.mobile})`,
                     "--tablet-bg": `url(${images.tablet})`,

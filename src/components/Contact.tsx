@@ -48,7 +48,6 @@ export default function Contact(): JSX.Element {
     
         // If there are errors on form submit, set the state to the errors object, causing a page refresh and the error messages below to render
         setErrors(newErrors)
-        console.log(newErrors)
         
         // If there are no errors on form submit, manually reset the form, render a confirmation message (appears under button if formIsSubmitted is true) and "send" the form data to the server
         if (Object.keys(newErrors).length === 0) {

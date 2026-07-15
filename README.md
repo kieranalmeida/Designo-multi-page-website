@@ -10,7 +10,7 @@ This is a solution to the [Designo agency website challenge on Frontend Mentor](
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
+  - [What I learned or practiced](#what-i-learned)
   - [Continued development](#continued-development)
 
 ## Overview
@@ -71,23 +71,16 @@ Users should be able to:
 - Basic use of Leaflet.js
 - Handling website width on larger screen sizes properly
 
-
-```css
-.project-category-card {
-    background-image: linear-gradient(var(--overlay), var(--overlay)), var(--mobile-bg);
-}
-
-@media (min-width: 768px) {
-    .project-category-card {
-        background-image: linear-gradient(var(--overlay), var(--overlay)), var(--tablet-bg);
-    }
-}
-
-@media (min-width: 1536px) {
-    .project-category-card {
-        background-image: linear-gradient(var(--overlay), var(--overlay)), var(--desktop-bg);
-    }
-}
+Some code snippets:
+```js
+<div 
+    className="project-category-card flex flex-col justify-center items-center gap-y-3 h-62.5 md:h-50 2xl:h-full px-14 text-white text-center uppercase bg-cover bg-center rounded-2xl" 
+    style={{
+        "--mobile-bg": `url(${images.mobile})`,
+        "--tablet-bg": `url(${images.tablet})`,
+        "--desktop-bg": `url(${images.desktop})`,
+    } as React.CSSProperties}
+  >
 ```
 ```js
 useEffect( () => {
@@ -110,6 +103,23 @@ useEffect( () => {
         document.removeEventListener("mousedown", handleClickOutside)
     }
 }, [menuOpen])
+```
+```js
+useEffect( () => {
+    const mediaQuery = window.matchMedia("(min-width: 768px)")
+
+    function handleScreenChange(event: MediaQueryListEvent) {
+        if (event.matches) {
+            setMenuOpen(false)
+        }
+    }
+
+    mediaQuery.addEventListener("change", handleScreenChange)
+
+    return () => {
+        mediaQuery.removeEventListener("change", handleScreenChange)
+    }
+}, [])
 ```
 
 ### Continued development
