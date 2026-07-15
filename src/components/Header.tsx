@@ -16,7 +16,7 @@ export default function Header(): JSX.Element {
     const location = useLocation()
     
     // Handles outside clicks when the hamburger menu is open
-    useEffect(() => {
+    useEffect( () => {
         function handleClickOutside(event: MouseEvent) {
             // If menuRef and buttonRef have a .current value (a HTML element), and if they don't contain the element the user clicked on (the click event's .target value) close the hamburger menu. In other words, if a click is detected on an element that isn't a child of the hamburger menu or the hamburger menu button, the menu will close.
             if (

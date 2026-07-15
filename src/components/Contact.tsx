@@ -1,4 +1,4 @@
-import {useState} from "react"
+import {useEffect, useState} from "react"
 import type {JSX} from "react"
 import {FaCircleExclamation} from "react-icons/fa6";
 // Components
@@ -16,7 +16,8 @@ type FormErrors = {
 
 export default function Contact(): JSX.Element {
     const [errors, setErrors] = useState<FormErrors>({})
-
+    const [formIsSubmitted, setFormIsSubmitted] = useState(false)
+    
     function handleSubmit(e: React.SubmitEvent<HTMLFormElement>) {
         // Prevents page reload and form reset
         e.preventDefault()
@@ -49,12 +50,23 @@ export default function Contact(): JSX.Element {
         setErrors(newErrors)
         console.log(newErrors)
         
-        // If there are no errors on form submit, manually reset the form and "send" the form data to the server
+        // If there are no errors on form submit, manually reset the form, render a confirmation message (appears under button if formIsSubmitted is true) and "send" the form data to the server
         if (Object.keys(newErrors).length === 0) {
             formElement.reset()
+            setFormIsSubmitted(true)
             console.log("Message has been submitted.")
         }
     }
+
+    // If the form has been submitted successfully, wait 5 seconds, then remove the confirmation message
+    useEffect( () => {
+        if (!formIsSubmitted) { return }
+
+        setTimeout( () => {
+            setFormIsSubmitted(false)
+        }, 5000);
+
+    }, [formIsSubmitted])
 
     return (
         <main className="relative flex flex-col gap-y-30 2xl:gap-y-40">
@@ -121,11 +133,17 @@ export default function Contact(): JSX.Element {
                     </div>
 
                     <button 
-                        className="w-38 mx-auto md:ml-auto md:mr-0 py-4.5 bg-white rounded-md text-black text-[0.9375rem] font-medium tracking-[0.0625rem] uppercase cursor-pointer hover:bg-light-peach hover:text-white focus:outline-none focus:ring-2 focus:ring-black">    
+                        className="w-38 mx-auto md:ml-auto md:mr-0 py-4.5 bg-white rounded-md text-black text-[0.9375rem] font-medium tracking-[0.0625rem] uppercase cursor-pointer hover:bg-light-peach hover:text-white focus:outline-none focus:ring-2 focus:ring-black" disabled={formIsSubmitted && true}>   
                         Submit
                     </button>
-                </form>
 
+                    <div className="absolute inset-0 flex justify-center md:justify-end md:right-16.5 2xl:right-25.75 pointer-events-none" role="status">
+                        {formIsSubmitted &&
+                            <span className="absolute bottom-5 text-[0.7rem] leading-6.25 md:text-[1rem] md:leading-6.5">Message submitted!</span>
+                        }
+                    </div>
+                </form>
+                
                 <div className="absolute flex flex-col items-center inset-0 pointer-events-none" aria-hidden="true">
                     <img className="absolute top-0 max-w-none md:hidden" src={patternTwoCircles} alt=""/>
                     <img className="absolute bottom-38.5 -left-40 2xl:bottom-0 2xl:left-0 max-w-none hidden md:block" src={patternHeroHome} alt=""/>
