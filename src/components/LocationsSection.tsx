@@ -23,7 +23,12 @@ export default function LocationsSection(): JSX.Element {
                     </div>
 
                     <h1 className="text-dark-grey font-medium text-[1.25rem] leading-6.5 tracking-[0.3125rem] uppercase mt-12 mb-6">Canada</h1>
-                    <Link className="text-white font-medium text-[0.9375rem] tracking-[0.0625rem] py-4 px-4 uppercase bg-peach rounded-md hover:bg-light-peach" to="/locations" aria-label="View our locations">See location</Link>
+                    <Link 
+                        className="text-white font-medium text-[0.9375rem] tracking-[0.0625rem] py-4 px-4 uppercase bg-peach rounded-md hover:bg-light-peach" to="/locations" aria-label="View our locations"
+                        state={ {location: "can"} }
+                    >
+                        See location
+                    </Link>
                 </div>
 
                 <div className="flex flex-col items-center">
@@ -33,7 +38,12 @@ export default function LocationsSection(): JSX.Element {
                     </div>
 
                     <h1 className="text-dark-grey font-medium text-[1.25rem] leading-6.5 tracking-[0.3125rem] uppercase mt-12 mb-6">Australia</h1>
-                    <Link className="text-white font-medium text-[0.9375rem] tracking-[0.0625rem] py-4 px-4 uppercase bg-peach rounded-md hover:bg-light-peach" to="/locations" aria-label="View our locations">See location</Link>
+                    <Link 
+                        className="text-white font-medium text-[0.9375rem] tracking-[0.0625rem] py-4 px-4 uppercase bg-peach rounded-md hover:bg-light-peach" to="/locations" aria-label="View our locations"
+                        state={ {location: "au"}}
+                    >
+                        See location
+                    </Link>
                 </div>
 
                 <div className="flex flex-col items-center">
@@ -43,7 +53,12 @@ export default function LocationsSection(): JSX.Element {
                     </div>
 
                     <h1 className="text-dark-grey font-medium text-[1.25rem] leading-6.5 tracking-[0.3125rem] uppercase mt-12 mb-6">United Kingdom</h1>
-                    <Link className="text-white font-medium text-[0.9375rem] tracking-[0.0625rem] py-4 px-4 uppercase bg-peach rounded-md hover:bg-light-peach" to="/locations" aria-label="View our locations">See location</Link>
+                    <Link 
+                        className="text-white font-medium text-[0.9375rem] tracking-[0.0625rem] py-4 px-4 uppercase bg-peach rounded-md hover:bg-light-peach" to="/locations" aria-label="View our locations"
+                        state={ {location: "uk"}}
+                    >
+                        See location
+                    </Link>
                 </div>
             </section>
     )

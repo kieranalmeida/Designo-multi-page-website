@@ -1,6 +1,6 @@
 import {useState} from "react"
 import type {JSX} from "react"
-import { FaC, FaCircleExclamation } from "react-icons/fa6";
+import {FaCircleExclamation} from "react-icons/fa6";
 // Components
 import LocationsSection from "./LocationsSection"
 // Images
@@ -23,10 +23,11 @@ export default function Contact(): JSX.Element {
         
         // Error object for storing errors and their corresponding message
         let newErrors: FormErrors = {}
-        console.log(newErrors)
     
+        // Save both the form element itself and the form data using the event received by onSubmit
         const formElement = e.currentTarget
         const formData = new FormData(e.currentTarget)
+        // Get each of the form inputs by their name, convert them to a string and trim any white space (? is needed to satisfy TypeScript)
         const name = formData.get("name")?.toString().trim() as string
         const email = formData.get("email")?.toString().trim() as string
         const message = formData.get("message")?.toString().trim() as string
@@ -47,10 +48,10 @@ export default function Contact(): JSX.Element {
         setErrors(newErrors)
         console.log(newErrors)
         
-        // If there are no errors on form submit, reset the form and "send" the form data to the server
+        // If there are no errors on form submit, manually reset the form and "send" the form data to the server
         if (Object.keys(newErrors).length === 0) {
-            console.log("Message has been submitted.")
             formElement.reset()
+            console.log("Message has been submitted.")
         }
     }
 
@@ -70,7 +71,6 @@ export default function Contact(): JSX.Element {
                                 name="name"
                                 type="text"
                                 placeholder="Name"
-                                required
                             />
                             {errors.name && 
                                 <div className="absolute top-0 right-0 flex flex-row items-center gap-x-2.25">
@@ -86,7 +86,6 @@ export default function Contact(): JSX.Element {
                                 name="email"
                                 type="email"
                                 placeholder="Email Address"
-                                required
                             />
                             {errors.email && 
                                 <div className="absolute top-0 right-0 flex flex-row items-center gap-x-2.25">
@@ -110,7 +109,6 @@ export default function Contact(): JSX.Element {
                                 name="message"
                                 className="w-full pl-3.75 pb-19 border-b border-white resize-none placeholder-white/50 text-[0.9375rem] font-medium leading-6.5 focus:outline-none focus:placeholder-white focus:shadow-[0_2px_0_0_white]"
                                 placeholder="Your Message"
-                                required
                             />
                             {errors.message && 
                                 <div className="absolute top-0 right-0 flex flex-row items-center gap-x-2.25">

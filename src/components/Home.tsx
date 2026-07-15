@@ -19,10 +19,10 @@ export default function Home(): JSX.Element {
     return (
         <main className="relative flex flex-col gap-y-30 2xl:gap-y-40" aria-label="Hero section">
             {/* Hero section */}
-            <section className="relative flex flex-col items-center h-210.75 pt-20 px-6 bg-peach overflow-hidden md:mx-10 md:pt-15 md:px-14.5 md:rounded-2xl 2xl:flex-row 2xl:items-start 2xl:gap-x-10 2xl:h-160 2xl:mx-41 2xl:pt-36.25 2xl:px-26.25">
-                <div className="z-2 flex flex-col items-center text-center text-white 2xl:items-start 2xl:text-left">
-                    <h1 className="text-[2rem] font-medium leading-9 max-w-135 md:text-[3rem] md:leading-12">Award-winning custom designs and digital brand solutions</h1>
-                    <p className="text-[0.9375rem] leading-6.25 max-w-111.25 mt-7.75 mb-6 md:text-[1rem] md:mt-9 md:mb-4.75 md:leading-6.5 2xl:mt-9.75 2xl:mb-10">
+            <section className="relative flex flex-col items-center overflow-hidden 2xl:flex-row 2xl:items-start 2xl:gap-x-10 h-210.75 2xl:h-160 md:mx-10 2xl:mx-41 pt-20 px-6 md:pt-15 md:px-14.5 2xl:pt-36.25 2xl:px-26.25 bg-peach md:rounded-2xl">
+                <div className="z-2 flex flex-col items-center 2xl:items-start text-center 2xl:text-left text-white">
+                    <h1 className="max-w-135 text-[2rem] font-medium leading-9 md:text-[3rem] md:leading-12">Award-winning custom designs and digital brand solutions</h1>
+                    <p className="max-w-111.25 mt-7.75 mb-6 md:mt-9 md:mb-4.75 2xl:mt-9.75 2xl:mb-10 text-[0.9375rem] leading-6.25 md:text-[1rem] md:leading-6.5">
                         With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, and engaging brand experiences. Find out more about our services.
                     </p>
 
@@ -32,8 +32,8 @@ export default function Home(): JSX.Element {
                 </div>
 
                 <div className="absolute inset-0 pointer-events-none flex justify-center">
-                    <img className="absolute z-1 top-75 max-w-none md:top-72 2xl:-right-20 2xl:-top-8" src={heroPhone} alt="Example of a website design displayed on a mobile phone"/>
-                    <img className="absolute -right-56 top-25 max-w-none md:-right-21 2xl:right-0 2xl:top-0" src={patternHeroHome} alt="" aria-hidden="true"/>
+                    <img className="absolute z-1 max-w-none top-75 md:top-72 2xl:-right-20 2xl:-top-8" src={heroPhone} alt="Example of a website design displayed on a mobile phone"/>
+                    <img className="absolute max-w-none -right-56 top-25 md:-right-21 2xl:right-0 2xl:top-0" src={patternHeroHome} alt="" aria-hidden="true"/>
                 </div>
             </section>
 

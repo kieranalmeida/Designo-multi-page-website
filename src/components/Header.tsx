@@ -40,7 +40,7 @@ export default function Header(): JSX.Element {
         }
     }, [menuOpen])
     
-    // If the active Route changes and the hamburger menu is open, close it
+    // If the active Route changes and the hamburger menu is open, close it. Additionally, if the active route changes, scroll to the top of the page.
     useEffect( () => {
         if (menuOpen) {
             setMenuOpen(false)
@@ -82,7 +82,7 @@ export default function Header(): JSX.Element {
 
     return (
         <>
-            <header className="relative z-4 flex justify-between items-center py-8.75 px-6 bg-white md:py-16 md:px-9.75 md:p 2xl:px-41">
+            <header className="relative z-4 flex justify-between items-center py-8.75 px-6 md:py-16 md:px-9.75 2xl:px-41 bg-white">
                 <Link to="/" aria-label="Go to home page">
                     <img className="w-39.25" src={logoDark} alt="Designo logo"/>
                 </Link>

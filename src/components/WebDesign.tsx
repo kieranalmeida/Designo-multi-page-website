@@ -12,7 +12,6 @@ import {appDesignImages, graphicDesignImages} from "../data/project-category-car
 // Other images
 import patternLeaf from "../images/shared/desktop/bg-pattern-leaf.svg"
 
-
 export default function WebDesign(): JSX.Element {
     return (
         <main className="relative flex flex-col gap-y-30 2xl:gap-y-40" aria-label="Hero section">
