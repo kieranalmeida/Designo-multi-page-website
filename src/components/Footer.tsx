@@ -20,24 +20,24 @@ export default function Footer(): JSX.Element {
 
     return (
         <footer className={footerClass}>
-        {/* Top part of footer */}
-        {location.pathname !== "/contact" &&
-            <div className="absolute z-1 -top-50 left-6 right-6 flex flex-col items-center py-16 px-6 bg-peach rounded-2xl overflow-hidden md:-top-60 md:left-10 md:right-10 md:py-14.25 md:px-14.5 2xl:-top-55 2xl:flex-row 2xl:justify-between 2xl:pt-18 2xl:px-24 2xl:left-41 2xl:right-41 ">
-                <div className="max-w-114.75 text-white text-center 2xl:text-left">
-                    <h2 className="text-[2rem] font-medium leading-9 md:text-[2.5rem] md:leading-10">Let's talk about your project</h2>
-                    <p className="text-[0.9375rem] leading-6.25 mt-6 mb-8 md:text-[1rem] 2xl:mb-0">Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.</p>
-                </div>
+            {/* Top part of footer */}
+            {location.pathname !== "/contact" &&
+                <div className="absolute z-1 -top-50 left-6 right-6 flex flex-col items-center py-16 px-6 bg-peach rounded-2xl overflow-hidden md:-top-60 md:left-10 md:right-10 md:py-14.25 md:px-14.5 2xl:-top-55 2xl:flex-row 2xl:justify-between 2xl:pt-18 2xl:px-24 2xl:left-41 2xl:right-41 2xl:w-277.75 2xl:mx-auto">
+                    <div className="max-w-114.75 text-white text-center 2xl:text-left">
+                        <h2 className="text-[2rem] font-medium leading-9 md:text-[2.5rem] md:leading-10">Let's talk about your project</h2>
+                        <p className="text-[0.9375rem] leading-6.25 mt-6 mb-8 md:text-[1rem] 2xl:mb-0">Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.</p>
+                    </div>
 
-                <Link className="text-dark-grey text-[0.9375rem] font-medium tracking-0.25 uppercase py-4.25 px-4.75 bg-white rounded-md hover:text-white hover:bg-light-peach focus:outline-none focus:ring-2 focus:ring-black" to="/contact" aria-label="Contact us">
-                    Get in touch
-                </Link>
-                
-                <img className="absolute -z-1 max-w-none -right-80 -bottom-36 md:-right-38 2xl:right-0" src={patternCallToAction}/>
-            </div>
-        }
+                    <Link className="text-dark-grey text-[0.9375rem] font-medium tracking-0.25 uppercase py-4.25 px-4.75 bg-white rounded-md hover:text-white hover:bg-light-peach focus:outline-none focus:ring-2 focus:ring-black" to="/contact" aria-label="Contact us">
+                        Get in touch
+                    </Link>
+                    
+                    <img className="absolute -z-1 max-w-none -right-80 -bottom-36 md:-right-38 2xl:right-0" src={patternCallToAction}/>
+                </div>
+            }
 
             {/* Main footer */}
-            <div className="flex flex-col gap-y-10 w-full">
+            <div className="flex flex-col gap-y-10 w-full 2xl:w-277.75 2xl:mx-auto">
                 {/* Main footer first half */}
                 <div className="flex flex-col items-center gap-y-8 md:flex-row md:justify-between">
                     <Link to="/" aria-label="Go to home page">

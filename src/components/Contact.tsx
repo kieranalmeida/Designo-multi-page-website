@@ -6,6 +6,7 @@ import LocationsSection from "./LocationsSection"
 // Images
 import patternTwoCircles from "../images/shared/desktop/bg-pattern-two-circles.svg"
 import patternHeroHome from "../images/home/desktop/bg-pattern-hero-home.svg"
+import patternLeaf from "../images/shared/desktop/bg-pattern-leaf.svg"
 
 type FormErrors = {
     name?: string,
@@ -56,8 +57,8 @@ export default function Contact(): JSX.Element {
     }
 
     return (
-        <main className="flex flex-col gap-y-30 2xl:gap-y-40">
-            <section className="relative flex flex-col items-center 2xl:flex-row 2xl:justify-between gap-y-12 bg-peach overflow-hidden md:mx-10 2xl:mx-41 px-6 py-18 md:px-14.5 md:py-17.75 2xl:px-23.75 2xl:py-13.55 md:rounded-2xl">
+        <main className="relative flex flex-col gap-y-30 2xl:gap-y-40">
+            <section className="relative flex flex-col items-center 2xl:flex-row 2xl:justify-between gap-y-12 bg-peach overflow-hidden md:mx-10 2xl:w-277.75 2xl:mx-auto px-6 py-18 md:px-14.5 md:py-17.75 2xl:px-23.75 2xl:py-13.55 md:rounded-2xl">
                 <div className="z-1 flex flex-col gap-y-6 text-white text-center md:text-start 2xl:w-111.25">
                     <h1 className="text-[2rem] font-medium leading-9 md:text-[3rem] md:leading-12">Contact Us</h1>
                     <p className="text-[0.9375rem] leading-6.25 md:text-[1rem] md:leading-6.5">Ready to take it to the next level? Let's talk about your project or idea and find out how we can help your business grow. If you are looking for unique digital experiences that's relatable to your users, drop us a line.</p>
@@ -132,6 +133,8 @@ export default function Contact(): JSX.Element {
             </section>
 
             <LocationsSection />
+
+            <img className="absolute -z-2 right-0 top-200 pointer-events-none hidden 2xl:block" src={patternLeaf} alt="" aria-hidden="true"/>
         </main>
     )
 }

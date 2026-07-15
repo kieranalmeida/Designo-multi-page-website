@@ -22,10 +22,10 @@ import patternLeaf from "../images/shared/desktop/bg-pattern-leaf.svg"
 export default function About(): JSX.Element {
     return (
         <main className="relative flex flex-col gap-y-30 2xl:gap-y-40 overflow-hidden">
-            <img className="absolute -z-2 w-251.5 top-80 left-0 hidden 2xl:block" src={patternLeaf} alt="" aria-hidden="true"/>
+            <img className="absolute -z-2 left-0 top-80 pointer-events-none hidden 2xl:block" src={patternLeaf} alt="" aria-hidden="true"/>
 
             {/* Hero section */}
-            <section className="relative flex flex-col items-center bg-peach overflow-hidden md:mx-10 md:rounded-2xl 2xl:mx-41 2xl:flex-row-reverse 2xl:justify-between 2xl:h-140.5" aria-labelledby="about-us-heading">
+            <section className="relative flex flex-col items-center bg-peach overflow-hidden md:mx-10 md:rounded-2xl 2xl:w-277.75 2xl:mx-auto 2xl:flex-row-reverse 2xl:justify-between 2xl:h-140.5" aria-labelledby="about-us-heading">
                 <div className="z-1 w-full 2xl:w-119 2xl:h-full" aria-hidden="true">
                     <img className="w-full h-80 object-cover md:hidden" src={aboutHeroMobile} alt=""/>
                     <img className="w-full h-80 object-cover hidden md:block 2xl:hidden" src={aboutHeroTablet} alt=""/>
@@ -44,7 +44,7 @@ export default function About(): JSX.Element {
             </section>
 
             {/* Section 2 */}
-            <section className="relative flex flex-col items-center bg-seashell overflow-hidden md:mx-10 md:rounded-2xl 2xl:flex-row 2xl:justify-between 2xl:mx-41" aria-labelledby="world-class-talent-heading">
+            <section className="relative flex flex-col items-center bg-seashell overflow-hidden md:mx-10 md:rounded-2xl 2xl:flex-row 2xl:justify-between 2xl:w-277.75 2xl:mx-auto" aria-labelledby="world-class-talent-heading">
                 <div className="z-1 w-full 2xl:w-119" aria-hidden="true">
                     <img className="w-full h-80 object-cover md:hidden" src={worldClassTalentMobile} alt=""/>
                     <img className="w-full h-80 object-cover hidden md:block 2xl:hidden" src={worldClassTalentTablet} alt=""/>
@@ -69,7 +69,7 @@ export default function About(): JSX.Element {
             <LocationsSection />
 
             {/* Section 4 */}
-            <section className="relative flex flex-col items-center bg-seashell overflow-hidden mb-77.5 md:mx-10 md:rounded-2xl 2xl:flex-row-reverse 2xl:justify-between 2xl:mx-41 md:mb-95" aria-labelledby="the-real-deal-heading">
+            <section className="relative flex flex-col items-center bg-seashell overflow-hidden mb-77.5 md:mx-10 md:rounded-2xl 2xl:flex-row-reverse 2xl:justify-between 2xl:w-277.75 2xl:mx-auto md:mb-95" aria-labelledby="the-real-deal-heading">
                 <div className="z-1 w-full 2xl:w-119" aria-hidden="true">
                     <img className="w-full h-80 object-cover md:hidden" src={realDealMobile} alt=""/>
                     <img className="w-full h-80 object-cover hidden md:block 2xl:hidden" src={realDealTablet} alt=""/>
@@ -91,7 +91,7 @@ export default function About(): JSX.Element {
                 </div>
             </section>
 
-            <img className="absolute -z-2 w-251.5 bottom-192 -right-70 rotate-180 hidden 2xl:block" src={patternLeaf} alt="" aria-hidden="true"/>
+            <img className="absolute -z-2 -right-90 bottom-192 rotate-180 pointer-events-none hidden 2xl:block" src={patternLeaf} alt="" aria-hidden="true"/>
         </main>
     )
 }

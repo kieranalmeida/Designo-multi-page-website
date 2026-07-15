@@ -35,17 +35,16 @@ export default function Locations(): JSX.Element {
 
     return (
         <main className="" aria-label="Our locations">
-            <section className="flex flex-col gap-y-10 md:gap-y-30 2xl:gap-y-8 mb-77.5 md:mx-10 md:mb-95 2xl:mx-41">
-
+            <section className="flex flex-col gap-y-10 md:gap-y-30 2xl:gap-y-8 mb-77.5 md:mx-10 md:mb-95 2xl:w-277.75 2xl:mx-auto">
                 {/* Canada location */}
-                <div className="flex flex-col md:gap-y-7.5 2xl:flex-row-reverse 2xl:gap-x-7.5" ref={canRef}>
+                <div className="flex flex-col md:gap-y-7.5 2xl:flex-row-reverse 2xl:justify-between" ref={canRef}>
                     {/* Container 1 */}
-                    <div className="z-1 w-full h-80 md:h-81.5 2xl:w-1/4 rounded-2xl overflow-hidden" id="canada-map">
+                    <div className="z-1 w-full h-80 md:h-81.5 2xl:w-87.5 rounded-2xl overflow-hidden" id="canada-map">
                         <Map coords={[43.710454, -79.248552]}/>
                     </div>
                     
                     {/* Container 2 */}
-                    <div className="relative flex flex-col items-center gap-y-6 md:items-start 2xl:w-3/4 px-6 py-20 md:px-18.75 md:py-22 bg-seashell overflow-hidden md:rounded-2xl">
+                    <div className="relative flex flex-col items-center gap-y-6 md:items-start 2xl:w-182.5 px-6 py-20 md:px-18.75 md:py-22 bg-seashell overflow-hidden md:rounded-2xl">
                         <h2 className="z-1 text-peach text-[2rem] font-medium leading-9 md:text-[2.5rem] md:leading-12">Canada</h2>
 
                         <div className="z-1 flex flex-col gap-y-6 md:flex-row md:gap-x-27.75 w-full text-center md:text-start">
@@ -67,14 +66,14 @@ export default function Locations(): JSX.Element {
                 </div>
 
                 {/* Australia location */}
-                <div className="flex flex-col md:gap-y-7.5 2xl:flex-row 2xl:gap-x-7.5" ref={auRef}>
+                <div className="flex flex-col md:gap-y-7.5 2xl:flex-row 2xl:justify-between" ref={auRef}>
                     {/* Container 1 */}
-                    <div className="z-1 w-full h-80 md:h-81.5 2xl:w-1/4 rounded-2xl overflow-hidden" id="canada-map">
+                    <div className="z-1 w-full h-80 md:h-81.5 2xl:w-87.5 rounded-2xl overflow-hidden" id="canada-map">
                         <Map coords={[-33.124834, 151.582762]}/>
                     </div>
                     
                     {/* Container 2 */}
-                    <div className="relative flex flex-col items-center gap-y-6 md:items-start 2xl:w-3/4 px-6 py-20 md:px-18.75 md:py-22 bg-seashell overflow-hidden md:rounded-2xl">
+                    <div className="relative flex flex-col items-center gap-y-6 md:items-start 2xl:w-182.5 px-6 py-20 md:px-18.75 md:py-22 bg-seashell overflow-hidden md:rounded-2xl">
                         <h2 className="z-1 text-peach text-[2rem] font-medium leading-9 md:text-[2.5rem] md:leading-12">Australia</h2>
 
                         <div className="z-1 flex flex-col gap-y-6 md:flex-row md:gap-x-27.75 w-full text-center md:text-start">
@@ -96,14 +95,14 @@ export default function Locations(): JSX.Element {
                 </div>
 
                 {/* United Kingdom location */}
-                <div className="flex flex-col md:gap-y-7.5 2xl:flex-row-reverse 2xl:gap-x-7.5" ref={ukRef}>
+                <div className="flex flex-col md:gap-y-7.5 2xl:flex-row-reverse 2xl:justify-between" ref={ukRef}>
                     {/* Container 1 */}
-                    <div className="z-1 w-full h-80 md:h-81.5 2xl:w-1/4 rounded-2xl overflow-hidden" id="canada-map">
+                    <div className="z-1 w-full h-80 md:h-81.5 2xl:w-87.5 rounded-2xl overflow-hidden" id="canada-map">
                         <Map coords={[53.733378, -1.331442]}/>
                     </div>
                     
                     {/* Container 2 */}
-                    <div className="relative flex flex-col items-center gap-y-6 md:items-start 2xl:w-3/4 px-6 py-20 md:px-18.75 md:py-22 bg-seashell overflow-hidden md:rounded-2xl">
+                    <div className="relative flex flex-col items-center gap-y-6 md:items-start 2xl:w-182.5 px-6 py-20 md:px-18.75 md:py-22 bg-seashell overflow-hidden md:rounded-2xl">
                         <h2 className="z-1 text-peach text-[2rem] font-medium leading-9 md:text-[2.5rem] md:leading-12">United Kingdom</h2>
 
                         <div className="z-1 flex flex-col gap-y-6 md:flex-row md:gap-x-27.75 w-full text-center md:text-start">
@@ -123,7 +122,6 @@ export default function Locations(): JSX.Element {
                         <img className="absolute left-0 top-0 md:top-auto md:bottom-0 max-w-none pointer-events-none" src={patternThreeCircles} alt="" aria-hidden="true"/>
                     </div>
                 </div>
-
             </section>
         </main>
     )

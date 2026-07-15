@@ -82,7 +82,7 @@ export default function Header(): JSX.Element {
 
     return (
         <>
-            <header className="relative z-4 flex justify-between items-center py-8.75 px-6 md:py-16 md:px-9.75 2xl:px-41 bg-white">
+            <header className="relative z-4 flex justify-between items-center py-8.75 px-6 md:py-16 md:px-9.75 2xl:px-0 2xl:w-277.75 2xl:mx-auto bg-white">
                 <Link to="/" aria-label="Go to home page">
                     <img className="w-39.25" src={logoDark} alt="Designo logo"/>
                 </Link>

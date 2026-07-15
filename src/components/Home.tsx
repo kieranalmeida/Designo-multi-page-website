@@ -18,10 +18,12 @@ import patternLeaf from "../images/shared/desktop/bg-pattern-leaf.svg"
 export default function Home(): JSX.Element {
     return (
         <main className="relative flex flex-col gap-y-30 2xl:gap-y-40" aria-label="Hero section">
+            <img className="absolute -z-2 left-0 top-80 pointer-events-none hidden 2xl:block" src={patternLeaf} alt="" aria-hidden="true"/>
+
             {/* Hero section */}
-            <section className="relative flex flex-col items-center overflow-hidden 2xl:flex-row 2xl:items-start 2xl:gap-x-10 h-210.75 2xl:h-160 md:mx-10 2xl:mx-41 pt-20 px-6 md:pt-15 md:px-14.5 2xl:pt-36.25 2xl:px-26.25 bg-peach md:rounded-2xl">
+            <section className="relative flex flex-col items-center overflow-hidden 2xl:flex-row 2xl:items-start 2xl:gap-x-10 h-210.75 2xl:h-160 md:mx-10 2xl:w-277.75 2xl:mx-auto pt-20 px-6 md:pt-15 md:px-14.5 2xl:pt-36.25 2xl:px-26.25 bg-peach md:rounded-2xl">
                 <div className="z-2 flex flex-col items-center 2xl:items-start text-center 2xl:text-left text-white">
-                    <h1 className="max-w-135 text-[2rem] font-medium leading-9 md:text-[3rem] md:leading-12">Award-winning custom designs and digital brand solutions</h1>
+                    <h1 className="max-w-134 text-[2rem] font-medium leading-9 md:text-[3rem] md:leading-12">Award-winning custom designs and digital brand solutions</h1>
                     <p className="max-w-111.25 mt-7.75 mb-6 md:mt-9 md:mb-4.75 2xl:mt-9.75 2xl:mb-10 text-[0.9375rem] leading-6.25 md:text-[1rem] md:leading-6.5">
                         With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, and engaging brand experiences. Find out more about our services.
                     </p>
@@ -38,7 +40,7 @@ export default function Home(): JSX.Element {
             </section>
 
             {/* Project categories section */}
-            <section className="grid gap-y-6 mx-6 md:mx-10 2xl:mx-41 2xl:grid-cols-2 2xl:grid-rows-2 2xl:gap-x-7.5 2xl:h-160" aria-label="Project categories section">
+            <section className="grid gap-y-6 mx-6 md:mx-10 2xl:w-277.75 2xl:mx-auto 2xl:grid-cols-2 2xl:grid-rows-2 2xl:gap-x-7.5 2xl:h-160" aria-label="Project categories section">
                 {/* The three project category cards display in a column on mobile and tablet screen sizes. For desktop and above, two columns with two rows are created, with the first card taking the first column and spanning both rows, and the other two evenly stacking in the other column by default. The cards grow in height up to the grid's height limit of 640px. */}
                 <div className="2xl:row-span-2">
                     <ProjectCategoryCard url="web-design" images={webDesignImages} categoryName={"Web design"}/>
@@ -51,7 +53,7 @@ export default function Home(): JSX.Element {
             </section>
 
             {/* About section */}
-            <section className="relative flex flex-col gap-y-20 mx-6 mb-77.75 md:gap-y-8 md:mx-10 md:mb-82.75 2xl:flex-row 2xl:gap-x-8 2xl:mx-41 2xl:mb-95" aria-label="About section">
+            <section className="relative flex flex-col gap-y-20 mx-6 mb-77.75 md:gap-y-8 md:mx-10 md:mb-82.75 2xl:flex-row 2xl:gap-x-8 2xl:w-277.75 2xl:mx-auto 2xl:mb-95" aria-label="About section">
 
                     <div className="relative flex flex-col items-center md:flex-row md:gap-x-12 2xl:flex-col">
                         <img src={illustrationPassionate}/>
@@ -85,7 +87,7 @@ export default function Home(): JSX.Element {
 
             </section>
 
-            <img className="absolute -z-2 w-251.5 bottom-18.5 right-0 rotate-180 hidden 2xl:block" src={patternLeaf} alt="" aria-hidden="true"/>
+            <img className="absolute -z-2 right-0 bottom-18.5 rotate-180 pointer-events-none hidden 2xl:block" src={patternLeaf} alt="" aria-hidden="true"/>
         </main>
     )
 }

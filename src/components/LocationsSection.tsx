@@ -10,7 +10,7 @@ export default function LocationsSection(): JSX.Element {
     const location = useLocation()
 
     const sectionClass = `
-        flex flex-col gap-y-12 mx-6 md:mx-10 2xl:flex-row 2xl:justify-between 2xl:mx-41 
+        flex flex-col gap-y-12 mx-6 md:mx-10 2xl:flex-row 2xl:justify-between 2xl:w-277.75 2xl:mx-auto 
         ${location.pathname === "/contact" && "mb-30 2xl:mb-40"}
     `
     
