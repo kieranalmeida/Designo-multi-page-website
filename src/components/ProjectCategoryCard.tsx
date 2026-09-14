@@ -30,7 +30,7 @@ export default function ProjectCategoryCard({url, images, categoryName}: Project
 
                 <div className="flex items-center gap-x-4">
                     <p className="text-[0.9375rem] font-medium tracking-[0.3125rem]">View projects</p>
-                    <FiChevronRight className="text-peach" aria-hidden="true"/>
+                    <FiChevronRight className="text-peach shrink-0" aria-hidden="true"/>
                 </div>
             </div>
         </Link>        

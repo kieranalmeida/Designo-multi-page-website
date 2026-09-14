@@ -1,6 +1,7 @@
 import type {JSX} from "react"
 import {useState, useRef, useEffect} from "react"
 import {Link, NavLink, useLocation} from "react-router-dom"
+import { FocusTrap } from "focus-trap-react"
 // Images
 import logoDark from "../images/shared/desktop/logo-dark.png"
 import openHamburgerButton from "../images/shared/mobile/icon-hamburger.svg"
@@ -61,13 +62,23 @@ export default function Header(): JSX.Element {
             }
         }
 
+        // Close the menu if the escape key is pressed when it's open
+        function handleEscape(event: KeyboardEvent) {
+            if (menuOpen === true && event.key === "Escape") {
+                setMenuOpen(false)
+            }
+        }
+
         // Add event listener to mediaQuery that listens for changes and runs handleScreenChange (will only trigger when the .matches key changes)
         // When triggered, an event object is created containing the new state of mediaQuery's keys, which is then passed into handleScreenChange where the .matches property is checked
         mediaQuery.addEventListener("change", handleScreenChange)
+        // Listen for key presses
+        document.addEventListener("keydown", handleEscape)
 
-        // Removes the eventListener when unmounted
+        // Removes the eventListeners when unmounted
         return () => {
             mediaQuery.removeEventListener("change", handleScreenChange)
+            document.removeEventListener("keydown", handleEscape)
         }
     }, [])
 
@@ -101,11 +112,15 @@ export default function Header(): JSX.Element {
             </header>
             
             {/* Hamburger menu */}
-            <div className={`absolute z-4 w-full flex-col py-12 bg-black ${menuOpen ? "flex" : "hidden"}`} ref={menuRef}>
-                <NavLink className={hamburgerNavLinkClass} to="/about" aria-label="Learn more about our company">Our Company</NavLink>
-                <NavLink className={hamburgerNavLinkClass} to="/locations" aria-label="Check what locations we operate in">Locations</NavLink> 
-                <NavLink className={hamburgerNavLinkClass} to="/contact" aria-label="Contact us">Contact</NavLink>
-            </div>
+            {menuOpen &&
+                <FocusTrap>
+                    <div className="absolute z-4 flex w-full flex-col py-12 bg-black" ref={menuRef}>
+                        <NavLink className={hamburgerNavLinkClass} to="/about" aria-label="Learn more about our company">Our Company</NavLink>
+                        <NavLink className={hamburgerNavLinkClass} to="/locations" aria-label="Check what locations we operate in">Locations</NavLink> 
+                        <NavLink className={hamburgerNavLinkClass} to="/contact" aria-label="Contact us">Contact</NavLink>
+                    </div>
+                </FocusTrap>
+            }
 
             {/* Places a black, transparent background over the entire page, excluding the header and hamburger menu, while the hamburger menu is open */}
             {menuOpen &&
