@@ -80,7 +80,7 @@ export default function Header(): JSX.Element {
             mediaQuery.removeEventListener("change", handleScreenChange)
             document.removeEventListener("keydown", handleEscape)
         }
-    }, [])
+    }, [menuOpen])
 
     // Returns styling for the NavLinks and uses the isActive property provided by React to apply active Link styling
     const navLinkClass = ({isActive}: {isActive: boolean}) => `
@@ -98,30 +98,42 @@ export default function Header(): JSX.Element {
                     <img className="w-39.25" src={logoDark} alt="Designo logo"/>
                 </Link>
 
-                {/* Hamburger menu button */}
-                <button className="cursor-pointer transition p-4 -m-4 rounded-full hover:bg-light-grey md:hidden" aria-label="Toggle navigation menu" onClick={ () => setMenuOpen( (prevMenuOpen) => !prevMenuOpen) } ref={buttonRef}>
-                    <img src={menuOpen ? closeHamburgerButton : openHamburgerButton}/>
-                </button>
-
                 {/* Nav bar */}
                 <nav className="hidden md:flex gap-10.5">
                     <NavLink className={navLinkClass} to="/about" aria-label="Learn more about our company">Our Company</NavLink>
                     <NavLink className={navLinkClass} to="/locations" aria-label="Check what locations we operate in">Locations</NavLink> 
                     <NavLink className={navLinkClass} to="/contact" aria-label="Contact us">Contact</NavLink>
                 </nav>
-            </header>
-            
-            {/* Hamburger menu */}
-            {menuOpen &&
-                <FocusTrap>
-                    <div className="absolute z-4 flex w-full flex-col py-12 bg-black" ref={menuRef}>
-                        <NavLink className={hamburgerNavLinkClass} to="/about" aria-label="Learn more about our company">Our Company</NavLink>
-                        <NavLink className={hamburgerNavLinkClass} to="/locations" aria-label="Check what locations we operate in">Locations</NavLink> 
-                        <NavLink className={hamburgerNavLinkClass} to="/contact" aria-label="Contact us">Contact</NavLink>
+
+                <FocusTrap 
+                    active={menuOpen}
+                    focusTrapOptions={{
+                        allowOutsideClick: true,
+                    }}
+                >
+                    <div>
+                        {/* Hamburger menu button */}
+                        <button 
+                            onClick={ () => setMenuOpen( (prevMenuOpen) => !prevMenuOpen) } ref={buttonRef}
+                            className="cursor-pointer transition p-4 -m-4 rounded-full hover:bg-light-grey md:hidden" 
+                            aria-label="Toggle navigation menu"
+                            aria-expanded={menuOpen}
+                        >
+                            <img src={menuOpen ? closeHamburgerButton : openHamburgerButton}/>
+                        </button>
+
+                        {/* Hamburger menu */}
+                        {menuOpen &&
+                            <div className="absolute top-22 left-0 z-4 flex w-full flex-col py-12 bg-black" ref={menuRef}>
+                                <NavLink className={hamburgerNavLinkClass} to="/about" aria-label="Learn more about our company">Our Company</NavLink>
+                                <NavLink className={hamburgerNavLinkClass} to="/locations" aria-label="Check what locations we operate in">Locations</NavLink> 
+                                <NavLink className={hamburgerNavLinkClass} to="/contact" aria-label="Contact us">Contact</NavLink>
+                            </div>
+                        }
                     </div>
                 </FocusTrap>
-            }
-
+            </header>
+            
             {/* Places a black, transparent background over the entire page, excluding the header and hamburger menu, while the hamburger menu is open */}
             {menuOpen &&
                 <div className="fixed z-3 inset-0 bg-black/50"></div>
